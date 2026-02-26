@@ -1,0 +1,6 @@
+interface:
+  display_name: "Health"
+  short_description: "Store and update health.md records"
+  default_prompt: "Use $health to store and update my health information in health.md, ask follow-up questions, and keep pregnancy, diabetes, and other health context current."
+policy:
+  allow_implicit_invocation: true
