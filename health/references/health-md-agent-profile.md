@@ -56,6 +56,21 @@ Recommended fields:
 - `Added By`
 - `Last Reviewed`
 
+### `## Linked Health Files`
+Index focused companion files for specific conditions or health events.
+
+Examples:
+- `pregnancy.md`
+- `diabetes.md`
+
+Recommended fields:
+- `Type`
+- `Skill`
+- `Status` (`active`, `archived`, `planned`)
+- `Reason`
+- `Created`
+- `Last Updated`
+
 ### `## Active Programs`
 Store ongoing tracking/coaching workflows only when relevant and user-approved.
 
@@ -99,4 +114,5 @@ Recommended fields:
 3. Store inferred findings in `Unconfirmed Findings` until confirmed.
 4. Add provenance to agent-added facts.
 5. Update frontmatter `last_updated` when writing changes.
-6. Ask short, high-value follow-up questions and persist them if unanswered.
+6. Index focused condition/event files in `Linked Health Files` when created (for example `pregnancy.md`).
+7. Ask short, high-value follow-up questions and persist them if unanswered.

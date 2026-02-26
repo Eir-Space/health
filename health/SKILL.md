@@ -53,7 +53,16 @@ Follow these steps in order unless the user asks for a narrower action.
   - `diabetes`
 - Use a discovery skill (for example `health-skill-finder`) when available to find additional relevant skills.
 
-### 6. Offer Programs Only When Useful
+### 6. Maintain Linked Condition/Event Files
+
+- `health.md` is the master record and index.
+- When a condition/context needs detailed tracking, create a focused companion file and list it in `## Linked Health Files`.
+- Prefer canonical skill-aligned filenames:
+  - `pregnancy.md`
+  - `diabetes.md`
+- Add/update the corresponding `Linked Health Files` entry whenever the focused file is created or changed.
+
+### 7. Offer Programs Only When Useful
 
 - Use `Active Programs` only for ongoing workflows (for example glucose tracking).
 - Do not activate intensive tracking without user agreement.
@@ -78,6 +87,15 @@ Treat contexts like these as first-class modifiers for future health answers:
 
 Store them in `Active Health Contexts` when they are active and relevant.
 
+### Focused Condition/Event Files
+
+- Use focused files for event- or condition-specific details that would clutter `health.md`.
+- Examples:
+  - `pregnancy.md` for gestational age, prenatal visits, symptoms, questions, and pregnancy-specific plans
+  - `diabetes.md` for glucose logs, patterns, targets, and diabetes-specific education/tracking
+- Keep a short summary in `health.md` and the detail in the focused file.
+- Always list focused files in `## Linked Health Files`.
+
 ### Minimal Questions Strategy
 
 - Prefer 1-3 clarifying questions per turn.
@@ -90,8 +108,9 @@ Store them in `Active Health Contexts` when they are active and relevant.
 
 1. Add `Pregnancy` to `Active Health Contexts` with `Source: user_reported`
 2. Add `pregnancy` to `Skill Attachments` (`Suggested` or `Active`)
-3. Ask only essential follow-up questions (for example gestational age, urgent symptoms) if needed
-4. Adapt future health answers to pregnancy-safe framing
+3. Create `pregnancy.md` if detailed tracking/context is useful, and add it to `Linked Health Files`
+4. Ask only essential follow-up questions (for example gestational age, urgent symptoms) if needed
+5. Adapt future health answers to pregnancy-safe framing
 
 ### When User Uploads EHR or Journal Content
 
