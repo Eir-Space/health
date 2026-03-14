@@ -1,0 +1,33 @@
+KAROLINSKA UNIVERSITY HOSPITAL
+Laboratory Results Report
+
+Patient: John Doe
+DOB: 1985-03-15
+Date Collected: 2024-02-10
+Report Date: 2024-02-11
+
+CHEMISTRY PANEL
+
+Hemoglobin A1C               6.8%        Reference: <7.0% (ADA target)
+Glucose, Fasting           125 mg/dL     Reference: 70-100 mg/dL (H)
+Creatinine                  0.9 mg/dL    Reference: 0.6-1.2 mg/dL
+eGFR                        >60          Reference: >60 mL/min/1.73m²
+Potassium                   4.2 mEq/L    Reference: 3.5-5.0 mEq/L
+
+LIPID PROFILE
+
+Total Cholesterol          198 mg/dL     Reference: <200 mg/dL
+LDL Cholesterol            128 mg/dL     Reference: <100 mg/dL (H)
+HDL Cholesterol             45 mg/dL     Reference: >40 mg/dL (M), >50 mg/dL (F)
+Triglycerides              156 mg/dL     Reference: <150 mg/dL (H)
+
+INTERPRETATION:
+- HbA1c shows good glycemic control, improved from previous 8.2%
+- LDL cholesterol elevated, consider statin therapy
+- Continue current diabetes management
+
+Physician: Dr. Sarah Johnson, MD
+Department: Endocrinology
+Phone: +46-8-123-4567
+
+Next appointment scheduled: 2024-05-10

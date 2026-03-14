@@ -1,0 +1,1040 @@
+metadata:
+  format_version: "1.0"
+  created_at: "2026-02-18T10:01:22.097Z"
+  source: "1177.se Journal"
+  patient:
+    name: "Birger Moell"
+    birth_date: "1986-02-28"
+    personal_number: "19860228-0250"
+  export_info:
+    total_entries: 43
+    date_range:
+      start: "2001-02-26"
+      end: "2026-01-14"
+    healthcare_providers:
+      - "Östervåla vårdcentral,Region Uppsala, Östervåla vårdcentral"
+      - "S Klinisk Genetik Mott, Stockholm"
+      - "Patienten har tidigare uppmärksammats på att han tillhör Klinisk genetik i Uppsala men han önskar testas hos oss tillsammans med sin bror Viktor som har en bokad tid hos oss 6/2. Eftersom vi har vårdval så bokas patienten. Vi byter till bors SläktID F0075161"
+      - "Av Karolinska Universitetssjukhuset, Karolinskavägen 37A, Solna, QB84 Mottagning Klinisk genetik, 17176, Stockholm"
+      - "Östervåla vårdcentral, Region Uppsala, Östervåla vårdcentral"
+      - "Östervåla vårdcentral"
+      - "Folktandvården Östervåla, Östervåla"
+      - "Folktandvården Östervåla"
+      - "Folktandvården Östervåla, Region Uppsala"
+      - "SLSO- Närakut Danderyd"
+      - "SLSO- Närakut Danderyd, Stockholm"
+      - "Folktandvården Fridhemsplan Akuten, Stockholm"
+      - "SLSO- Danderyds VC"
+      - "SLSO- Danderyds VC, Danderyd"
+      - "Akut tubulo-interstitiell nefrit"
+entries:
+  -     id: "entry_001"
+    date: "Unknown"
+    time: "10:33"
+    category: "Vårdkontakter"
+    type: "Telefon­kontakt"
+    provider:
+      name: "Östervåla vårdcentral,Region Uppsala, Östervåla vårdcentral"
+      region: "Region Uppsala"
+      location: "Östervåla vårdcentral,Region Uppsala, Östervåla vårdcentral"
+    status: "Nytt"
+    responsible_person:
+      name: "Ulrika Åverling"
+      role: "Distriktssköterska"
+    content:
+      summary: "Vårdkontakter - Telefon­kontakt"
+      details: "10 feb 2026 Vårdkontakter Telefon­kontakt Östervåla vårdcentral,Region Uppsala, Östervåla vårdcentral Nytt Telefonkontakt Ladda ner Dag & tid: tisdag 10 februari 2026 klockan 10:33 Ansvarig för kontak..."
+      notes:
+        - "10 feb 2026 Vårdkontakter Telefon­kontakt Östervåla vårdcentral,Region Uppsala, Östervåla vårdcentral Nytt Telefonkontakt Ladda ner Dag & tid: tisdag 10 februari 2026 klockan 10:33 Ansvarig för kontakten Ulrika Åverling (Distriktssköterska) Östervåla vårdcentral,Region Uppsala, Östervåla vårdcentral Ladda ner Stäng"
+    attachments:
+[]
+    tags:
+      - "vårdkontakter"
+  -     id: "entry_002"
+    date: "Unknown"
+    time: "10:38"
+    category: "Vårdkontakter"
+    type: "Mottagnings­besök"
+    provider:
+      name: "S Klinisk Genetik Mott, Stockholm"
+      region: "Stockholm"
+      location: "S Klinisk Genetik Mott, Stockholm"
+    status: "Nytt"
+    responsible_person:
+      name: "Oda Blomqvist Picard"
+      role: "Läkare"
+    content:
+      summary: "Vårdkontakter - Mottagnings­besök"
+      details: "6 feb 2026 Vårdkontakter Mottagnings­besök S Klinisk Genetik Mott, Stockholm Nytt Mottagningsbesök Ladda ner Dag & tid: fredag 6 februari 2026 klockan 10:38 Ansvarig för kontakten Oda Blomqvist Picard..."
+      notes:
+        - "6 feb 2026 Vårdkontakter Mottagnings­besök S Klinisk Genetik Mott, Stockholm Nytt Mottagningsbesök Ladda ner Dag & tid: fredag 6 februari 2026 klockan 10:38 Ansvarig för kontakten Oda Blomqvist Picard (Läkare) S Klinisk Genetik Mott, Stockholm Ladda ner Stäng"
+    attachments:
+[]
+    tags:
+      - "vårdkontakter"
+      - "besök"
+  -     id: "entry_003"
+    date: "2026-01-14"
+    time: "12:40"
+    category: "Anteckningar"
+    type: "Anteckning"
+    provider:
+      name: "Patienten har tidigare uppmärksammats på att han tillhör Klinisk genetik i Uppsala men han önskar testas hos oss tillsammans med sin bror Viktor som har en bokad tid hos oss 6/2. Eftersom vi har vårdval så bokas patienten. Vi byter till bors SläktID F0075161"
+      region: "Unknown"
+      location: "Patienten har tidigare uppmärksammats på att han tillhör Klinisk genetik i Uppsala men han önskar testas hos oss tillsammans med sin bror Viktor som har en bokad tid hos oss 6/2. Eftersom vi har vårdval så bokas patienten. Vi byter till bors SläktID F0075161"
+    status: "Nytt"
+    responsible_person:
+      name: "Anna Ehn"
+      role: "Sjuksköterska"
+    content:
+      summary: "Anteckningar - Anteckning"
+      details: "14 jan 2026 Anteckningar Anteckning S Klinisk Genetik Mott Nytt Anteckning 2026-01-14 12:40 Ladda ner Antecknad av Anna Ehn (Sjuksköterska) S Klinisk Genetik Mott Daganteckning Aktuellt Sekreterare ha..."
+      notes:
+        - "14 jan 2026 Anteckningar Anteckning S Klinisk Genetik Mott Nytt Anteckning 2026-01-14 12:40 Ladda ner Antecknad av Anna Ehn (Sjuksköterska) S Klinisk Genetik Mott Daganteckning Aktuellt Sekreterare har rekvirerat för fel person, ny rekvisition gällandes kusin skickas av sekreterare (se anteckning Dr Tesi). Patienten har tidigare uppmärksammats på att han tillhör Klinisk genetik i Uppsala men han önskar testas hos oss tillsammans med sin bror Viktor som har en bokad tid hos oss 6/2. Eftersom vi har vårdval så bokas patienten. Vi byter till bors SläktID F0075161 I brors SläktID finns också analyssvaret redan. Ladda ner Stäng"
+    attachments:
+[]
+    tags:
+      - "anteckningar"
+  -     id: "entry_004"
+    date: "Unknown"
+    time: "Unknown"
+    category: "Anteckningar"
+    type: "Anteckning"
+    provider:
+      name: "Unknown"
+      region: "Unknown"
+      location: "Unknown"
+    status: "Nytt"
+    responsible_person:
+      name: "Unknown"
+      role: "Unknown"
+    content:
+      summary: "Anteckningar - Anteckning"
+      details: "2 jan 2026 Anteckningar Anteckning S Klinisk Genetik Mott Nytt"
+      notes:
+[]
+    attachments:
+[]
+    tags:
+      - "anteckningar"
+  -     id: "entry_005"
+    date: "2025-12-22"
+    time: "14:51"
+    category: "Anteckningar"
+    type: "Anteckning"
+    provider:
+      name: "Unknown"
+      region: "Unknown"
+      location: "Unknown"
+    status: "Nytt"
+    responsible_person:
+      name: "Carola Nilsson"
+      role: "Medicinsk sekreterare"
+    content:
+      summary: "Anteckningar - Anteckning"
+      details: "22 dec 2025 Anteckningar Anteckning S Klinisk Genetik Mott Nytt Anteckning 2025-12-22 14:51 Ladda ner Antecknad av Carola Nilsson (Medicinsk sekreterare) S Klinisk Genetik Mott Daganteckning Antecknin..."
+      notes:
+        - "22 dec 2025 Anteckningar Anteckning S Klinisk Genetik Mott Nytt Anteckning 2025-12-22 14:51 Ladda ner Antecknad av Carola Nilsson (Medicinsk sekreterare) S Klinisk Genetik Mott Daganteckning Anteckning Beställning av provsvar på probandens syster, 19860228-0268 skickad till Klinisk genetik, Göteborg. Ladda ner Stäng"
+    attachments:
+[]
+    tags:
+      - "anteckningar"
+  -     id: "entry_006"
+    date: "2025-12-22"
+    time: "10:15"
+    category: "Remisser"
+    type: "Remiss"
+    provider:
+      name: "Av Karolinska Universitetssjukhuset, Karolinskavägen 37A, Solna, QB84 Mottagning Klinisk genetik, 17176, Stockholm"
+      region: "Stockholm"
+      location: "Av Karolinska Universitetssjukhuset, Karolinskavägen 37A, Solna, QB84 Mottagning Klinisk genetik, 17176, Stockholm"
+    status: "Nytt"
+    responsible_person:
+      name: "Unknown"
+      role: "Unknown"
+    content:
+      summary: "Remisser - Remiss"
+      details: "Remisser Remiss Valfrihetspatient Nytt Remiss 2025-12-22 10:15 Ladda ner Skickad av Valfrihetspatient Remissens status 2025-12-22 Bedömd Av Karolinska Universitetssjukhuset, Karolinskavägen 37A, Solna..."
+      notes:
+        - "Remisser Remiss Valfrihetspatient Nytt Remiss 2025-12-22 10:15 Ladda ner Skickad av Valfrihetspatient Remissens status 2025-12-22 Bedömd Av Karolinska Universitetssjukhuset, Karolinskavägen 37A, Solna, QB84 Mottagning Klinisk genetik, 17176, Stockholm Bedömd Av Karolinska Universitetssjukhuset, Karolinskavägen 37A, Solna, QB84 Mottagning Klinisk genetik, 17176, Stockholm Ladda ner Stäng"
+    attachments:
+[]
+    tags:
+      - "remisser"
+  -     id: "entry_007"
+    date: "2025-12-22"
+    time: "10:12"
+    category: "Anteckningar"
+    type: "Anteckning"
+    provider:
+      name: "Unknown"
+      region: "Unknown"
+      location: "Unknown"
+    status: "Nytt"
+    responsible_person:
+      name: "Bianca Tesi"
+      role: "Läkare"
+    content:
+      summary: "Anteckningar - Anteckning"
+      details: "Anteckningar Anteckning S Klinisk Genetik Mott Nytt Anteckning 2025-12-22 10:12 Ladda ner Antecknad av Bianca Tesi (Läkare) S Klinisk Genetik Mott Remissbedömning Remittent egenremiss Frågeställning B..."
+      notes:
+        - "Anteckningar Anteckning S Klinisk Genetik Mott Nytt Anteckning 2025-12-22 10:12 Ladda ner Antecknad av Bianca Tesi (Läkare) S Klinisk Genetik Mott Remissbedömning Remittent egenremiss Frågeställning BRCA1 bärare? Bedömning Systern testades för BRCA1 patogen variant 2013. Vi saknar dock provsvar från index släkting hos oss. Rekvireras från Klinisk Genetik Göteborg tillsammans med pedigree. Släktidentifikation F0019303 och BRCA L5209 Åtgärd rekvirering av prosvar, kan därefter kallas till mottagning Ladda ner Stäng"
+    attachments:
+[]
+    tags:
+      - "anteckningar"
+  -     id: "entry_008"
+    date: "Unknown"
+    time: "Unknown"
+    category: "Anteckningar"
+    type: "Anteckning utan fysiskt möte"
+    provider:
+      name: "Östervåla vårdcentral, Region Uppsala, Östervåla vårdcentral"
+      region: "Region Uppsala"
+      location: "Östervåla vårdcentral, Region Uppsala, Östervåla vårdcentral"
+    status: "Nytt"
+    responsible_person:
+      name: "Unknown"
+      role: "Unknown"
+    content:
+      summary: "Anteckningar - Anteckning utan fysiskt möte"
+      details: "16 dec 2025 Anteckningar Anteckning utan fysiskt möte Östervåla vårdcentral, Region Uppsala, Östervåla vårdcentral Nytt"
+      notes:
+[]
+    attachments:
+[]
+    tags:
+      - "anteckningar"
+  -     id: "entry_009"
+    date: "Unknown"
+    time: "Unknown"
+    category: "Vårdkontakter"
+    type: "Annan"
+    provider:
+      name: "Östervåla vårdcentral,Region Uppsala, Östervåla vårdcentral"
+      region: "Region Uppsala"
+      location: "Östervåla vårdcentral,Region Uppsala, Östervåla vårdcentral"
+    status: "Nytt"
+    responsible_person:
+      name: "Unknown"
+      role: "Unknown"
+    content:
+      summary: "Vårdkontakter - Annan"
+      details: "17 mar 2025 Vårdkontakter Annan Östervåla vårdcentral,Region Uppsala, Östervåla vårdcentral Nytt"
+      notes:
+[]
+    attachments:
+[]
+    tags:
+      - "vårdkontakter"
+  -     id: "entry_010"
+    date: "Unknown"
+    time: "Unknown"
+    category: "Anteckningar"
+    type: "Besöks­anteckning"
+    provider:
+      name: "Östervåla vårdcentral, Region Uppsala, Östervåla vårdcentral"
+      region: "Region Uppsala"
+      location: "Östervåla vårdcentral, Region Uppsala, Östervåla vårdcentral"
+    status: "Nytt"
+    responsible_person:
+      name: "Unknown"
+      role: "Unknown"
+    content:
+      summary: "Anteckningar - Besöks­anteckning"
+      details: "Anteckningar Besöks­anteckning Östervåla vårdcentral, Region Uppsala, Östervåla vårdcentral Nytt"
+      notes:
+[]
+    attachments:
+[]
+    tags:
+      - "anteckningar"
+      - "besök"
+  -     id: "entry_011"
+    date: "Unknown"
+    time: "Unknown"
+    category: "Diagnoser"
+    type: "Vaccination avseende artropodöverförd virusencefalit"
+    provider:
+      name: "Östervåla vårdcentral, Region Uppsala, Östervåla vårdcentral"
+      region: "Region Uppsala"
+      location: "Östervåla vårdcentral, Region Uppsala, Östervåla vårdcentral"
+    status: "Nytt"
+    responsible_person:
+      name: "Unknown"
+      role: "Unknown"
+    content:
+      summary: "Diagnoser - Vaccination avseende artropodöverförd virusencefalit"
+      details: "Diagnoser Vaccination avseende artropodöverförd virusencefalit Östervåla vårdcentral, Region Uppsala, Östervåla vårdcentral Nytt"
+      notes:
+[]
+    attachments:
+[]
+    tags:
+      - "diagnoser"
+      - "vaccination"
+      - "diagnos"
+  -     id: "entry_012"
+    date: "Unknown"
+    time: "Unknown"
+    category: "Vaccinationer"
+    type: "FSME-IMMUN Vuxen"
+    provider:
+      name: "Östervåla vårdcentral"
+      region: "Unknown"
+      location: "Östervåla vårdcentral"
+    status: "Nytt"
+    responsible_person:
+      name: "Unknown"
+      role: "Unknown"
+    content:
+      summary: "Vaccinationer - FSME-IMMUN Vuxen"
+      details: "Vaccinationer FSME-IMMUN Vuxen Östervåla vårdcentral Nytt"
+      notes:
+[]
+    attachments:
+[]
+    tags:
+      - "vaccinationer"
+      - "vaccination"
+  -     id: "entry_013"
+    date: "Unknown"
+    time: "Unknown"
+    category: "Diagnoser"
+    type: "TLV tillstånd"
+    provider:
+      name: "Folktandvården Östervåla, Östervåla"
+      region: "Unknown"
+      location: "Folktandvården Östervåla, Östervåla"
+    status: "Nytt"
+    responsible_person:
+      name: "Unknown"
+      role: "Unknown"
+    content:
+      summary: "Diagnoser - TLV tillstånd"
+      details: "11 jun 2024 Diagnoser TLV tillstånd Folktandvården Östervåla, Östervåla Nytt"
+      notes:
+[]
+    attachments:
+[]
+    tags:
+      - "diagnoser"
+      - "tandvård"
+      - "diagnos"
+  -     id: "entry_014"
+    date: "2024-06-11"
+    time: "09:01"
+    category: "Anteckningar"
+    type: "Åtgärd/behandling"
+    provider:
+      name: "Folktandvården Östervåla"
+      region: "Unknown"
+      location: "Folktandvården Östervåla"
+    status: "Nytt"
+    responsible_person:
+      name: "Ban Rabi"
+      role: "Tandläkare"
+    content:
+      summary: "Anteckningar - Åtgärd/behandling"
+      details: "Anteckningar Åtgärd/behandling Folktandvården Östervåla Nytt Åtgärd/behandling 2024-06-11 09:01 Ladda ner Antecknad av Ban Rabi (Tandläkare) Folktandvården Östervåla Behandling Allmänt tandvårdsbidrag..."
+      notes:
+        - "Anteckningar Åtgärd/behandling Folktandvården Östervåla Nytt Åtgärd/behandling 2024-06-11 09:01 Ladda ner Antecknad av Ban Rabi (Tandläkare) Folktandvården Östervåla Behandling Allmänt tandvårdsbidrag : Utförd Allmänt tandvårdsbidrag : Utförd Undersökning - Kompletterande undersökning eller utredning, enstaka tand - (FK tillstånd 1301) : Utförd Tandvård - Sjukdomsbehandlande åtgärder mindre omfattning - (FK tillstånd 4772) : Utförd Ladda ner Stäng"
+    attachments:
+[]
+    tags:
+      - "anteckningar"
+      - "tandvård"
+      - "läkare"
+  -     id: "entry_015"
+    date: "2024-06-11"
+    time: "08:55"
+    category: "Anteckningar"
+    type: "Utredning"
+    provider:
+      name: "Folktandvården Östervåla"
+      region: "Unknown"
+      location: "Folktandvården Östervåla"
+    status: "Nytt"
+    responsible_person:
+      name: "Ban Rabi"
+      role: "Tandläkare"
+    content:
+      summary: "Anteckningar - Utredning"
+      details: "Anteckningar Utredning Folktandvården Östervåla Nytt Utredning 2024-06-11 08:55 Ladda ner Antecknad av Ban Rabi (Tandläkare) Folktandvården Östervåla Status 11 - Fyllning - MP - Komposit - U.A. : Regi..."
+      notes:
+        - "Anteckningar Utredning Folktandvården Östervåla Nytt Utredning 2024-06-11 08:55 Ladda ner Antecknad av Ban Rabi (Tandläkare) Folktandvården Östervåla Status 11 - Fyllning - MP - Komposit - U.A. : Registrerad 11 - Kusp/Ytfraktur - M : Registrerad Ladda ner Stäng"
+    attachments:
+[]
+    tags:
+      - "anteckningar"
+      - "tandvård"
+      - "läkare"
+  -     id: "entry_016"
+    date: "Unknown"
+    time: "08:55"
+    category: "Vårdkontakter"
+    type: "Mottagnings­besök"
+    provider:
+      name: "Folktandvården Östervåla, Region Uppsala"
+      region: "Region Uppsala"
+      location: "Folktandvården Östervåla, Region Uppsala"
+    status: "Nytt"
+    responsible_person:
+      name: "Ban Rabi"
+      role: "tandläkare"
+    content:
+      summary: "Vårdkontakter - Mottagnings­besök"
+      details: "Vårdkontakter Mottagnings­besök Folktandvården Östervåla, Region Uppsala Nytt Mottagningsbesök Ladda ner Dag & tid: tisdag 11 juni 2024 klockan 08:55 - 09:35 Ansvarig för kontakten Ban Rabi (tandläkar..."
+      notes:
+        - "Vårdkontakter Mottagnings­besök Folktandvården Östervåla, Region Uppsala Nytt Mottagningsbesök Ladda ner Dag & tid: tisdag 11 juni 2024 klockan 08:55 - 09:35 Ansvarig för kontakten Ban Rabi (tandläkare) Folktandvården Östervåla, Region Uppsala Ladda ner Stäng"
+    attachments:
+[]
+    tags:
+      - "vårdkontakter"
+      - "tandvård"
+      - "besök"
+      - "tandläkare"
+      - "läkare"
+  -     id: "entry_017"
+    date: "2024-06-05"
+    time: "08:02"
+    category: "Anteckningar"
+    type: "Besöks­anteckning"
+    provider:
+      name: "Folktandvården Östervåla"
+      region: "Unknown"
+      location: "Folktandvården Östervåla"
+    status: "Nytt"
+    responsible_person:
+      name: "Linda Gullevin"
+      role: "Tandsköterska"
+    content:
+      summary: "Anteckningar - Besöks­anteckning"
+      details: "5 jun 2024 Anteckningar Besöks­anteckning Folktandvården Östervåla Nytt Besöksanteckning 2024-06-05 08:02 Ladda ner Antecknad av Linda Gullevin (Tandsköterska) Folktandvården Östervåla Daganteckning P..."
+      notes:
+        - "5 jun 2024 Anteckningar Besöks­anteckning Folktandvården Östervåla Nytt Besöksanteckning 2024-06-05 08:02 Ladda ner Antecknad av Linda Gullevin (Tandsköterska) Folktandvården Östervåla Daganteckning Pat ringer med fraktur, en flisa av en framtand har lossnat när han åt. Han har lagat samma framtand för tre år sedan. Får tid 11/6 muntligen samt via sms. Ladda ner Stäng"
+    attachments:
+[]
+    tags:
+      - "anteckningar"
+      - "tandvård"
+      - "besök"
+  -     id: "entry_018"
+    date: "2022-01-25"
+    time: "Unknown"
+    category: "Vaccinationer"
+    type: "Spikevax - Moderna COVID-19 Vaccin, mot COVID19"
+    provider:
+      name: "Unknown"
+      region: "Unknown"
+      location: "Unknown"
+    status: "Nytt"
+    responsible_person:
+      name: "Lena Blom, Werlabs Kistamässan Ansvarig Namn Lena Blom Vårdenhet Werlabs Kistamässan Plats Arne Beurlings Torg 5 164 40 Kista Ladda ner Stäng"
+      role: "batch 3006273"
+    content:
+      summary: "Vaccinationer - Spikevax - Moderna COVID-19 Vaccin, mot COVID19"
+      details: "25 jan 2022 Vaccinationer Spikevax - Moderna COVID-19 Vaccin, mot COVID19 Werlabs Kistamässan Nytt Spikevax - Moderna COVID-19 Vaccin, mot COVID19 2022-01-25 Ladda ner Utförd av Lena Blom Werlabs Kist..."
+      notes:
+[]
+    attachments:
+[]
+    tags:
+      - "vaccinationer"
+      - "vaccination"
+  -     id: "entry_019"
+    date: "Unknown"
+    time: "Unknown"
+    category: "Anteckningar"
+    type: "Besöks­anteckning"
+    provider:
+      name: "SLSO- Närakut Danderyd"
+      region: "Danderyd"
+      location: "SLSO- Närakut Danderyd"
+    status: "Nytt"
+    responsible_person:
+      name: "Unknown"
+      role: "Unknown"
+    content:
+      summary: "Anteckningar - Besöks­anteckning"
+      details: "2 nov 2021 Anteckningar Besöks­anteckning SLSO- Närakut Danderyd Nytt Osignerad"
+      notes:
+[]
+    attachments:
+[]
+    tags:
+      - "anteckningar"
+      - "akut"
+      - "besök"
+      - "osignerad"
+  -     id: "entry_020"
+    date: "Unknown"
+    time: "20:18"
+    category: "Vårdkontakter"
+    type: "Mottagnings­besök"
+    provider:
+      name: "SLSO- Närakut Danderyd, Stockholm"
+      region: "Stockholm"
+      location: "SLSO- Närakut Danderyd, Stockholm"
+    status: "Nytt"
+    responsible_person:
+      name: "SLSO- Närakut Danderyd, Stockholm Ladda ner Stäng"
+      role: "Unknown"
+    content:
+      summary: "Vårdkontakter - Mottagnings­besök"
+      details: "Vårdkontakter Mottagnings­besök SLSO- Närakut Danderyd, Stockholm Nytt Mottagningsbesök Ladda ner Dag & tid: tisdag 2 november 2021 klockan 20:18 Ansvarig för kontakten SLSO- Närakut Danderyd, Stockho..."
+      notes:
+        - "Vårdkontakter Mottagnings­besök SLSO- Närakut Danderyd, Stockholm Nytt Mottagningsbesök Ladda ner Dag & tid: tisdag 2 november 2021 klockan 20:18 Ansvarig för kontakten SLSO- Närakut Danderyd, Stockholm Ladda ner Stäng"
+    attachments:
+[]
+    tags:
+      - "vårdkontakter"
+      - "akut"
+      - "besök"
+  -     id: "entry_021"
+    date: "2021-11-02"
+    time: "00:00"
+    category: "Diagnoser"
+    type: "Luxation i tå"
+    provider:
+      name: "SLSO- Närakut Danderyd"
+      region: "Danderyd"
+      location: "SLSO- Närakut Danderyd"
+    status: "Nytt"
+    responsible_person:
+      name: "Andreas Fredholm"
+      role: "Läkare"
+    content:
+      summary: "Diagnoser - Luxation i tå"
+      details: "Diagnoser Luxation i tå SLSO- Närakut Danderyd Nytt Diagnos: Luxation i tå 2021-11-02 00:00 Ladda ner Antecknad av Andreas Fredholm (Läkare) SLSO- Närakut Danderyd Huvuddiagnos Luxation i tå Ladda ner..."
+      notes:
+        - "Diagnoser Luxation i tå SLSO- Närakut Danderyd Nytt Diagnos: Luxation i tå 2021-11-02 00:00 Ladda ner Antecknad av Andreas Fredholm (Läkare) SLSO- Närakut Danderyd Huvuddiagnos Luxation i tå Ladda ner Stäng"
+    attachments:
+[]
+    tags:
+      - "diagnoser"
+      - "akut"
+      - "diagnos"
+  -     id: "entry_022"
+    date: "2021-08-06"
+    time: "Unknown"
+    category: "Vaccinationer"
+    type: "Comirnaty- Pfizer/BioNTech Covid-19 vaccin, mot COVID19"
+    provider:
+      name: "Unknown"
+      region: "Unknown"
+      location: "Unknown"
+    status: "Nytt"
+    responsible_person:
+      name: "Linnea Haggård, Werlabs Kistamässan Ansvarig Namn Fauzia Khan Vårdenhet Werlabs Kistamässan Plats Arne Beurlings Torg 5 164 40 Kista Ladda ner Stäng"
+      role: "batch FF0680"
+    content:
+      summary: "Vaccinationer - Comirnaty- Pfizer/BioNTech Covid-19 vaccin, mot COVID19"
+      details: "6 aug 2021 Vaccinationer Comirnaty- Pfizer/BioNTech Covid-19 vaccin, mot COVID19 Werlabs Kistamässan Nytt Comirnaty- Pfizer/BioNTech Covid-19 vaccin, mot COVID19 2021-08-06 Ladda ner Utförd av Fauzia ..."
+      notes:
+[]
+    attachments:
+[]
+    tags:
+      - "vaccinationer"
+      - "vaccination"
+  -     id: "entry_023"
+    date: "2021-07-10"
+    time: "17:21"
+    category: "Anteckningar"
+    type: "Besöks­anteckning"
+    provider:
+      name: "Folktandvården Fridhemsplan Akuten, Stockholm"
+      region: "Stockholm"
+      location: "Folktandvården Fridhemsplan Akuten, Stockholm"
+    status: "Nytt"
+    responsible_person:
+      name: "Juni Liu"
+      role: "Tandläkare"
+    content:
+      summary: "Anteckningar - Besöks­anteckning"
+      details: "10 jul 2021 Anteckningar Besöks­anteckning Folktandvården Fridhemsplan Akuten, Stockholm Nytt Besöksanteckning 2021-07-10 17:21 Ladda ner Antecknad av Juni Liu (Tandläkare) Folktandvården Fridhemsplan..."
+      notes:
+        - "10 jul 2021 Anteckningar Besöks­anteckning Folktandvården Fridhemsplan Akuten, Stockholm Nytt Besöksanteckning 2021-07-10 17:21 Ladda ner Antecknad av Juni Liu (Tandläkare) Folktandvården Fridhemsplan Akuten, Stockholm Behandling Akut us: Patienten behandlad på AKUTEN ID kontroll: Pat söker akut pga värk regio 38 i två dagar, har tagit Alvedon och Ipren kombination Info att endast akutbehandling ges. Allmäntillstånd: ua Hälsodeklaration: updd Klinisk us: Tand 38 erupterad ua. operculum. svulen gingiva. 1apikalrtg, visar: ej ind Diagnos: 38 perikoronit Terapiförslag: spoln Kostnadsförslag: 1060 kr Pat samtycker till föreslagen behandlingoch kostnad Behandling: spoln 38 koksalt fys, corsodyl gel + tuss. info om status, förklaring för pat hur han ska hålla rent. rek Alvedon + Ipren och Corsodyl Pat ombedes kontakta ordinare tandläkare för fortsatt terapiplanering och behandling. Info pat ev besvär från tanden kan kvarstå till dess att tanden är fullständigt behandlad. Rekommenderar receptfria smärtstillande vid behov. Undersökning - Kompletterande eller akut undersökning utförd av tandläkare - (FK tillstånd 1301) : Utförd Tandvård - Tillägg obekväm arbetstid : Utförd Tandvård - Sjukdoms- eller smärtbehandling, mindre omfattande - (FK tillstånd 3045) : Utförd Allmänt tandvårdsbidrag : Utförd Ladda ner Stäng"
+    attachments:
+[]
+    tags:
+      - "anteckningar"
+      - "akut"
+      - "tandvård"
+      - "diagnos"
+      - "besök"
+      - "tandläkare"
+      - "läkare"
+  -     id: "entry_024"
+    date: "Unknown"
+    time: "17:10"
+    category: "Vårdkontakter"
+    type: "Mottagnings­besök"
+    provider:
+      name: "Folktandvården Fridhemsplan Akuten, Stockholm"
+      region: "Stockholm"
+      location: "Folktandvården Fridhemsplan Akuten, Stockholm"
+    status: "Nytt"
+    responsible_person:
+      name: "Juni Liu"
+      role: "Leg. Tandläkare"
+    content:
+      summary: "Vårdkontakter - Mottagnings­besök"
+      details: "Vårdkontakter Mottagnings­besök Folktandvården Fridhemsplan Akuten, Stockholm Nytt Mottagningsbesök Ladda ner Dag & tid: lördag 10 juli 2021 klockan 17:10 - 17:30 Ansvarig för kontakten Juni Liu (Leg...."
+      notes:
+        - "Vårdkontakter Mottagnings­besök Folktandvården Fridhemsplan Akuten, Stockholm Nytt Mottagningsbesök Ladda ner Dag & tid: lördag 10 juli 2021 klockan 17:10 - 17:30 Ansvarig för kontakten Juni Liu (Leg. Tandläkare) Folktandvården Fridhemsplan Akuten, Stockholm Ladda ner Stäng"
+    attachments:
+[]
+    tags:
+      - "vårdkontakter"
+      - "akut"
+      - "tandvård"
+      - "besök"
+      - "läkare"
+  -     id: "entry_025"
+    date: "2021-06-23"
+    time: "Unknown"
+    category: "Vaccinationer"
+    type: "Comirnaty- Pfizer/BioNTech Covid-19 vaccin, mot COVID19"
+    provider:
+      name: "Unknown"
+      region: "Unknown"
+      location: "Unknown"
+    status: "Nytt"
+    responsible_person:
+      name: "Alex Jaranka, Capio Vaccination Filadelfia Ansvarig Namn Alex Jaranka Vårdenhet Capio Vaccination Filadelfia Plats Rörstrandsgatan 5 Ladda ner Stäng"
+      role: "batch FD6840"
+    content:
+      summary: "Vaccinationer - Comirnaty- Pfizer/BioNTech Covid-19 vaccin, mot COVID19"
+      details: "23 jun 2021 Vaccinationer Comirnaty- Pfizer/BioNTech Covid-19 vaccin, mot COVID19 Capio Vaccination Filadelfia Nytt Comirnaty- Pfizer/BioNTech Covid-19 vaccin, mot COVID19 2021-06-23 Ladda ner Utförd ..."
+      notes:
+[]
+    attachments:
+[]
+    tags:
+      - "vaccinationer"
+      - "vaccination"
+  -     id: "entry_026"
+    date: "2021-04-21"
+    time: "09:23"
+    category: "Anteckningar"
+    type: "Anteckning"
+    provider:
+      name: "Unknown"
+      region: "Unknown"
+      location: "Unknown"
+    status: "Nytt"
+    responsible_person:
+      name: "Anna Svelander"
+      role: "Administrativ personal"
+    content:
+      summary: "Anteckningar - Anteckning"
+      details: "21 apr 2021 Anteckningar Anteckning SLSO-Smittspårningsenhet Nytt Anteckning 2021-04-21 09:23 Ladda ner Antecknad av Anna Svelander (Administrativ personal) SLSO-Smittspårningsenhet Smittspårning Kont..."
+      notes:
+        - "21 apr 2021 Anteckningar Anteckning SLSO-Smittspårningsenhet Nytt Anteckning 2021-04-21 09:23 Ladda ner Antecknad av Anna Svelander (Administrativ personal) SLSO-Smittspårningsenhet Smittspårning Kontakttyp Telefonkontakt med patient Information till patienten, provsvar virus SARS-CoV-2 Informationsblad från Vårdgivarguiden. Positivt provsvar, virus påvisat Muntlig information och förhållningsregler.Positivt provsvar, virus påvisat Anmälan SML Anmälan enligt Smittskyddslagen gjord Anteckning Smittspårning utförd av patienten själv Ladda ner Stäng"
+    attachments:
+[]
+    tags:
+      - "anteckningar"
+  -     id: "entry_027"
+    date: "2020-12-28"
+    time: "12:53"
+    category: "Anteckningar"
+    type: "Besöks­anteckning"
+    provider:
+      name: "SLSO- Danderyds VC"
+      region: "Danderyd"
+      location: "SLSO- Danderyds VC"
+    status: "Nytt"
+    responsible_person:
+      name: "Kristina Sund"
+      role: "Läkare"
+    content:
+      summary: "Anteckningar - Besöks­anteckning"
+      details: "28 dec 2020 Anteckningar Besöks­anteckning SLSO- Danderyds VC Nytt Besöksanteckning 2020-12-28 12:53 Ladda ner Antecknad av Kristina Sund (Läkare) SLSO- Danderyds VC Besök Kontakttyp Planerat mottagni..."
+      notes:
+        - "28 dec 2020 Anteckningar Besöks­anteckning SLSO- Danderyds VC Nytt Besöksanteckning 2020-12-28 12:53 Ladda ner Antecknad av Kristina Sund (Läkare) SLSO- Danderyds VC Besök Kontakttyp Planerat mottagningsbesök Kontaktorsak Önskar bedömning av finger efter ett fall 23/12 Aktuellt Pat som föll i en trappa 23/12 och tog emot sig med båda händerna, dorsalsidan av höger hand. Sedan dess haft lite ont i ffa hö långfinger och önskar en bedömning varför bokat tid idag. Upplever ingen rörelseinskränkning, känselnedsättning eller nedsatt kraft. Tar även upp ont till vä i halsen sedan igår. Status Allmäntillstånd Gott, opåverkat. Munhåla och svalg Inspekteras med normalfuktade slemhinnor, oretade förhållanden. Tonsiller insp u.a. Ytliga lymfkörtlar Palp u.a. huvud, hals. Lokalstatus Hö hand: ingen felställning, svullnad, hematom eller sår. God rörlighet. Ingen extensions- eller flektionsdefekt. God kapillär återfyllnad samtliga fingrar. God känsel och grov kraft. Diskret palpationsömhet diffust över lång- och ringfinger. Skelettet palperas utan hak eller asymmetri. Ingen svullnad eller värk över MCP- eller IP-leder. 2PD 4mm u.a. samtliga fingrar. Bedömning Trauma mot höger hand för 5d sedan. Status väs u.a. Ingen misstanke om allvarlig skada. Ger lugnande besked. Ont i halsen sedan igår vid en specifik punkt. Inget avvikande i status. Råder till expektans. Uppföljning Ingen planerad. Åter vid behov. Ladda ner Stäng"
+    attachments:
+[]
+    tags:
+      - "anteckningar"
+      - "besök"
+  -     id: "entry_028"
+    date: "Unknown"
+    time: "12:52"
+    category: "Vårdkontakter"
+    type: "Mottagnings­besök"
+    provider:
+      name: "SLSO- Danderyds VC, Danderyd"
+      region: "Danderyd"
+      location: "SLSO- Danderyds VC, Danderyd"
+    status: "Nytt"
+    responsible_person:
+      name: "Kristina Sund"
+      role: "Läkare"
+    content:
+      summary: "Vårdkontakter - Mottagnings­besök"
+      details: "Vårdkontakter Mottagnings­besök SLSO- Danderyds VC, Danderyd Nytt Mottagningsbesök Ladda ner Dag & tid: måndag 28 december 2020 klockan 12:52 Ansvarig för kontakten Kristina Sund (Läkare) SLSO- Dander..."
+      notes:
+        - "Vårdkontakter Mottagnings­besök SLSO- Danderyds VC, Danderyd Nytt Mottagningsbesök Ladda ner Dag & tid: måndag 28 december 2020 klockan 12:52 Ansvarig för kontakten Kristina Sund (Läkare) SLSO- Danderyds VC, Danderyd Ladda ner Stäng"
+    attachments:
+[]
+    tags:
+      - "vårdkontakter"
+      - "besök"
+  -     id: "entry_029"
+    date: "2020-12-28"
+    time: "10:18"
+    category: "Anteckningar"
+    type: "Anteckning utan fysiskt möte"
+    provider:
+      name: "SLSO- Danderyds VC"
+      region: "Danderyd"
+      location: "SLSO- Danderyds VC"
+    status: "Nytt"
+    responsible_person:
+      name: "Britt Hulding Nyström"
+      role: "Distriktssköterska"
+    content:
+      summary: "Anteckningar - Anteckning utan fysiskt möte"
+      details: "Anteckningar Anteckning utan fysiskt möte SLSO- Danderyds VC Nytt Osignerad Osignerad anteckning En anteckning som inte är signerad av vårdpersonal kan komma att ändras. Anteckning utan fysiskt möte 2..."
+      notes:
+        - "Anteckningar Anteckning utan fysiskt möte SLSO- Danderyds VC Nytt Osignerad Osignerad anteckning En anteckning som inte är signerad av vårdpersonal kan komma att ändras. Anteckning utan fysiskt möte 2020-12-28 10:18 Ladda ner Antecknad av Britt Hulding Nyström (Distriktssköterska) SLSO- Danderyds VC Telefonkontakt Kontakttyp Telefonkontakt med patient Kontaktorsak Patient ringer, ramlat i trappa den 23/12, skadat fingrar. Önskar kontroll Åtgärd Bokar tid idag. Ladda ner Stäng"
+    attachments:
+[]
+    tags:
+      - "anteckningar"
+      - "osignerad"
+  -     id: "entry_030"
+    date: "2020-12-28"
+    time: "00:00"
+    category: "Diagnoser"
+    type: "Smärta, ospecifik i hand"
+    provider:
+      name: "SLSO- Danderyds VC"
+      region: "Danderyd"
+      location: "SLSO- Danderyds VC"
+    status: "Nytt"
+    responsible_person:
+      name: "Kristina Sund"
+      role: "Läkare"
+    content:
+      summary: "Diagnoser - Smärta, ospecifik i hand"
+      details: "Diagnoser Smärta, ospecifik i hand SLSO- Danderyds VC Nytt Diagnos: Smärta, ospecifik i hand 2020-12-28 00:00 Ladda ner Antecknad av Kristina Sund (Läkare) SLSO- Danderyds VC Huvuddiagnos Smärta, ospe..."
+      notes:
+        - "Diagnoser Smärta, ospecifik i hand SLSO- Danderyds VC Nytt Diagnos: Smärta, ospecifik i hand 2020-12-28 00:00 Ladda ner Antecknad av Kristina Sund (Läkare) SLSO- Danderyds VC Huvuddiagnos Smärta, ospecifik i hand Ladda ner Stäng"
+    attachments:
+[]
+    tags:
+      - "diagnoser"
+      - "diagnos"
+  -     id: "entry_031"
+    date: "2018-03-26"
+    time: "16:45"
+    category: "Anteckningar"
+    type: "Besöks­anteckning"
+    provider:
+      name: "SLSO- Närakut Danderyd"
+      region: "Danderyd"
+      location: "SLSO- Närakut Danderyd"
+    status: "Nytt"
+    responsible_person:
+      name: "Maria Sjödahl"
+      role: "Läkare"
+    content:
+      summary: "Anteckningar - Besöks­anteckning"
+      details: "26 mar 2018 Anteckningar Besöks­anteckning SLSO- Närakut Danderyd Nytt Besöksanteckning 2018-03-26 16:45 Ladda ner Antecknad av Maria Sjödahl (Läkare) SLSO- Närakut Danderyd Besök Kontakttyp Oplanerat..."
+      notes:
+        - "26 mar 2018 Anteckningar Besöks­anteckning SLSO- Närakut Danderyd Nytt Besöksanteckning 2018-03-26 16:45 Ladda ner Antecknad av Maria Sjödahl (Läkare) SLSO- Närakut Danderyd Besök Kontakttyp Oplanerat mottagningsbesök Aktuellt Feber och miktionssveda sedan två dagar. Kraktes idag, temp 39 vid inkomst hit. Status Allmäntillstånd Gott. Opåverkat. Fått Alvedon, afebril Buk Oöm Mätvärden Urinsticka nitritpositiv. Åtgärd Skickar urinodling, kontakt vid behov. recept Ciprofloxacin i tio dagar. Ladda ner Stäng"
+    attachments:
+[]
+    tags:
+      - "anteckningar"
+      - "akut"
+      - "besök"
+  -     id: "entry_032"
+    date: "2018-03-26"
+    time: "13:38"
+    category: "Anteckningar"
+    type: "Anteckning"
+    provider:
+      name: "SLSO- Danderyds VC"
+      region: "Danderyd"
+      location: "SLSO- Danderyds VC"
+    status: "Nytt"
+    responsible_person:
+      name: "Birgitta Björkå Dahlberg"
+      role: "Distriktssköterska"
+    content:
+      summary: "Anteckningar - Anteckning"
+      details: "Anteckningar Anteckning SLSO- Danderyds VC Nytt Anteckning 2018-03-26 13:38 Ladda ner Antecknad av Birgitta Björkå Dahlberg (Distriktssköterska) SLSO- Danderyds VC Återbud Anteckning Avbokar läkarbesö..."
+      notes:
+        - "Anteckningar Anteckning SLSO- Danderyds VC Nytt Anteckning 2018-03-26 13:38 Ladda ner Antecknad av Birgitta Björkå Dahlberg (Distriktssköterska) SLSO- Danderyds VC Återbud Anteckning Avbokar läkarbesök 26/3 Ladda ner Stäng"
+    attachments:
+[]
+    tags:
+      - "anteckningar"
+      - "besök"
+  -     id: "entry_033"
+    date: "Unknown"
+    time: "12:32"
+    category: "Vårdkontakter"
+    type: "Mottagnings­besök"
+    provider:
+      name: "SLSO- Närakut Danderyd, Stockholm"
+      region: "Stockholm"
+      location: "SLSO- Närakut Danderyd, Stockholm"
+    status: "Nytt"
+    responsible_person:
+      name: "SLSO- Närakut Danderyd, Stockholm Ladda ner Stäng"
+      role: "Unknown"
+    content:
+      summary: "Vårdkontakter - Mottagnings­besök"
+      details: "Vårdkontakter Mottagnings­besök SLSO- Närakut Danderyd, Stockholm Nytt Mottagningsbesök Ladda ner Dag & tid: måndag 26 mars 2018 klockan 12:32 Ansvarig för kontakten SLSO- Närakut Danderyd, Stockholm ..."
+      notes:
+        - "Vårdkontakter Mottagnings­besök SLSO- Närakut Danderyd, Stockholm Nytt Mottagningsbesök Ladda ner Dag & tid: måndag 26 mars 2018 klockan 12:32 Ansvarig för kontakten SLSO- Närakut Danderyd, Stockholm Ladda ner Stäng"
+    attachments:
+[]
+    tags:
+      - "vårdkontakter"
+      - "akut"
+      - "besök"
+  -     id: "entry_034"
+    date: "2018-03-26"
+    time: "00:00"
+    category: "Diagnoser"
+    type: "Akut tubulo-interstitiell nefrit"
+    provider:
+      name: "Akut tubulo-interstitiell nefrit"
+      region: "Unknown"
+      location: "Akut tubulo-interstitiell nefrit"
+    status: "Nytt"
+    responsible_person:
+      name: "Maria Sjödahl"
+      role: "Läkare"
+    content:
+      summary: "Diagnoser - Akut tubulo-interstitiell nefrit"
+      details: "Diagnoser Akut tubulo-interstitiell nefrit SLSO- Närakut Danderyd Nytt Diagnos: Akut tubulo-interstitiell nefrit 2018-03-26 00:00 Ladda ner Antecknad av Maria Sjödahl (Läkare) SLSO- Närakut Danderyd H..."
+      notes:
+        - "Diagnoser Akut tubulo-interstitiell nefrit SLSO- Närakut Danderyd Nytt Diagnos: Akut tubulo-interstitiell nefrit 2018-03-26 00:00 Ladda ner Antecknad av Maria Sjödahl (Läkare) SLSO- Närakut Danderyd Huvuddiagnos Akut tubulo-interstitiell nefrit Ladda ner Stäng"
+    attachments:
+[]
+    tags:
+      - "diagnoser"
+      - "akut"
+      - "diagnos"
+  -     id: "entry_035"
+    date: "2001-02-26"
+    time: "18:00"
+    category: "Diagnoser"
+    type: "DISTORSION (PV10-T03-P)?Handled??"
+    provider:
+      name: "Unknown"
+      region: "Unknown"
+      location: "Unknown"
+    status: "Nytt"
+    responsible_person:
+      name: "Lars Carle"
+      role: "PV10-T03-P"
+    content:
+      summary: "Diagnoser - DISTORSION (PV10-T03-P)?Handled??"
+      details: "26 feb 2001 Diagnoser DISTORSION (PV10-T03-P)?Handled?? MeDict journal, Tärnaby Nytt Osignerad Osignerad diagnos En diagnos som inte är signerad av vårdpersonal kan komma att ändras. Diagnos: DISTORSI..."
+      notes:
+        - "26 feb 2001 Diagnoser DISTORSION (PV10-T03-P)?Handled?? MeDict journal, Tärnaby Nytt Osignerad Osignerad diagnos En diagnos som inte är signerad av vårdpersonal kan komma att ändras. Diagnos: DISTORSION (PV10-T03-P)?Handled?? 2001-02-26 18:00 Ladda ner Antecknad av Lars Carle (läkare) MeDict journal, Tärnaby Bidiagnos DISTORSION (PV10-T03-P)?Handled?? Ladda ner Stäng"
+    attachments:
+[]
+    tags:
+      - "diagnoser"
+      - "diagnos"
+      - "osignerad"
+      - "läkare"
+  -     id: "entry_036"
+    date: "2026-01-02"
+    time: "13:50"
+    category: "Anteckningar"
+    type: "Anteckning"
+    provider:
+      name: "Unknown"
+      region: "Unknown"
+      location: "Unknown"
+    status: "Nytt"
+    responsible_person:
+      name: "Carola Nilsson"
+      role: "Medicinsk sekreterare"
+    content:
+      summary: "Anteckningar - Anteckning"
+      details: "2 jan 2026 Anteckningar Anteckning S Klinisk Genetik Mott Nytt Anteckning 2026-01-02 13:50 Ladda ner Antecknad av Carola Nilsson (Medicinsk sekreterare) S Klinisk Genetik Mott Daganteckning Anteckning..."
+      notes:
+        - "2 jan 2026 Anteckningar Anteckning S Klinisk Genetik Mott Nytt Anteckning 2026-01-02 13:50 Ladda ner Antecknad av Carola Nilsson (Medicinsk sekreterare) S Klinisk Genetik Mott Daganteckning Anteckning Svar från Klinisk genetik, Göteborg - har inget provsvar på probandens syster. Ladda ner Stäng"
+    attachments:
+[]
+    tags:
+      - "anteckningar"
+  -     id: "entry_037"
+    date: "2025-12-16"
+    time: "12:18"
+    category: "Anteckningar"
+    type: "Anteckning utan fysiskt möte"
+    provider:
+      name: "Östervåla vårdcentral, Region Uppsala, Östervåla vårdcentral"
+      region: "Region Uppsala"
+      location: "Östervåla vårdcentral, Region Uppsala, Östervåla vårdcentral"
+    status: "Nytt"
+    responsible_person:
+      name: "Ulrika Åverling"
+      role: "Distriktssköterska"
+    content:
+      summary: "Anteckningar - Anteckning utan fysiskt möte"
+      details: "16 dec 2025 Anteckningar Anteckning utan fysiskt möte Östervåla vårdcentral, Region Uppsala, Östervåla vårdcentral Nytt Anteckning utan fysiskt möte 2025-12-16 12:18 Ladda ner Antecknad av Ulrika Åver..."
+      notes:
+        - "16 dec 2025 Anteckningar Anteckning utan fysiskt möte Östervåla vårdcentral, Region Uppsala, Östervåla vårdcentral Nytt Anteckning utan fysiskt möte 2025-12-16 12:18 Ladda ner Antecknad av Ulrika Åverling (Distriktssköterska) Östervåla vårdcentral, Region Uppsala, Östervåla vårdcentral Allmänna uppgifter Riktat hälsosamtal Administrativ information Informationsbrev med telefonnummer saknas skickat Ladda ner Stäng"
+    attachments:
+[]
+    tags:
+      - "anteckningar"
+  -     id: "entry_038"
+    date: "Unknown"
+    time: "10:52"
+    category: "Vårdkontakter"
+    type: "Annan"
+    provider:
+      name: "Östervåla vårdcentral,Region Uppsala, Östervåla vårdcentral"
+      region: "Region Uppsala"
+      location: "Östervåla vårdcentral,Region Uppsala, Östervåla vårdcentral"
+    status: "Nytt"
+    responsible_person:
+      name: "Therese Karlberg"
+      role: "Distriktssköterska"
+    content:
+      summary: "Vårdkontakter - Annan"
+      details: "17 mar 2025 Vårdkontakter Annan Östervåla vårdcentral,Region Uppsala, Östervåla vårdcentral Nytt Annan Ladda ner Dag & tid: måndag 17 mars 2025 klockan 10:52 Ansvarig för kontakten Therese Karlberg (D..."
+      notes:
+        - "17 mar 2025 Vårdkontakter Annan Östervåla vårdcentral,Region Uppsala, Östervåla vårdcentral Nytt Annan Ladda ner Dag & tid: måndag 17 mars 2025 klockan 10:52 Ansvarig för kontakten Therese Karlberg (Distriktssköterska) Östervåla vårdcentral,Region Uppsala, Östervåla vårdcentral Ladda ner Stäng"
+    attachments:
+[]
+    tags:
+      - "vårdkontakter"
+  -     id: "entry_039"
+    date: "2025-03-17"
+    time: "10:52"
+    category: "Anteckningar"
+    type: "Besöks­anteckning"
+    provider:
+      name: "Östervåla vårdcentral, Region Uppsala, Östervåla vårdcentral"
+      region: "Region Uppsala"
+      location: "Östervåla vårdcentral, Region Uppsala, Östervåla vårdcentral"
+    status: "Nytt"
+    responsible_person:
+      name: "Therese Karlberg"
+      role: "Distriktssköterska"
+    content:
+      summary: "Anteckningar - Besöks­anteckning"
+      details: "Anteckningar Besöks­anteckning Östervåla vårdcentral, Region Uppsala, Östervåla vårdcentral Nytt Besöksanteckning 2025-03-17 10:52 Ladda ner Antecknad av Therese Karlberg (Distriktssköterska) Östervål..."
+      notes:
+        - "Anteckningar Besöks­anteckning Östervåla vårdcentral, Region Uppsala, Östervåla vårdcentral Nytt Besöksanteckning 2025-03-17 10:52 Ladda ner Antecknad av Therese Karlberg (Distriktssköterska) Östervåla vårdcentral, Region Uppsala, Östervåla vårdcentral Allmänna uppgifter ID-kontroll Utförd mot giltig ID-handling Kontaktorsak Vaccination TBE Egenbetalande Ja Bedömning Hälsodeklaration: Inga kontraindikationer mot vaccination Åtgärd Ordinerad av FSME-IMMUN: Drochtert, Sarah, distriktsläkare, drs003 Vaccinerad av Karlberg, Therese, kat025 Diagnos & åtgärdskod Z241-Vaccination avseende artropodöverförd virusencefalit-HuvuddiagnosDT030-Vaccination (i)-ÅtgärdJ07BA01-Vaccin mot fästingburen encefalit, inaktiverat helvirusvaccin- Ladda ner Stäng"
+    attachments:
+[]
+    tags:
+      - "anteckningar"
+      - "vaccination"
+      - "diagnos"
+      - "besök"
+      - "läkare"
+  -     id: "entry_040"
+    date: "2025-03-17"
+    time: "10:52"
+    category: "Diagnoser"
+    type: "Vaccination avseende artropodöverförd virusencefalit"
+    provider:
+      name: "Östervåla vårdcentral, Region Uppsala, Östervåla vårdcentral"
+      region: "Region Uppsala"
+      location: "Östervåla vårdcentral, Region Uppsala, Östervåla vårdcentral"
+    status: "Nytt"
+    responsible_person:
+      name: "Therese Karlberg"
+      role: "Distriktssköterska"
+    content:
+      summary: "Diagnoser - Vaccination avseende artropodöverförd virusencefalit"
+      details: "Diagnoser Vaccination avseende artropodöverförd virusencefalit Östervåla vårdcentral, Region Uppsala, Östervåla vårdcentral Nytt Diagnos: Vaccination avseende artropodöverförd virusencefalit 2025-03-1..."
+      notes:
+        - "Diagnoser Vaccination avseende artropodöverförd virusencefalit Östervåla vårdcentral, Region Uppsala, Östervåla vårdcentral Nytt Diagnos: Vaccination avseende artropodöverförd virusencefalit 2025-03-17 10:52 Ladda ner Antecknad av Therese Karlberg (Distriktssköterska) Östervåla vårdcentral, Region Uppsala, Östervåla vårdcentral Huvuddiagnos Vaccination avseende artropodöverförd virusencefalit Ladda ner Stäng"
+    attachments:
+[]
+    tags:
+      - "diagnoser"
+      - "vaccination"
+      - "diagnos"
+  -     id: "entry_041"
+    date: "2025-03-17"
+    time: "Unknown"
+    category: "Vaccinationer"
+    type: "FSME-IMMUN Vuxen"
+    provider:
+      name: "Östervåla vårdcentral"
+      region: "Unknown"
+      location: "Östervåla vårdcentral"
+    status: "Nytt"
+    responsible_person:
+      name: "Drochtert, Sarah, distriktsläkare, drs003, Östervåla vårdcentral Kommentar till administrationen Ordinerad av Drochtert, Sarah, distriktsläkare, drs003, Vaccinerad av Karlberg, Therese, kat025 Ansvarig Namn Drochtert, Sarah, distriktsläkare, drs003 Vårdenhet Östervåla VC Plats Saknas - Ladda ner Stäng"
+      role: "batch KC8559"
+    content:
+      summary: "Vaccinationer - FSME-IMMUN Vuxen"
+      details: "Vaccinationer FSME-IMMUN Vuxen Östervåla vårdcentral Nytt FSME-IMMUN Vuxen 2025-03-17 Ladda ner Utförd av Karlberg, Anne Östervåla vårdcentral Vaccin Dos Dos 3 Administrationssätt 0.5 ml, intramuskulä..."
+      notes:
+[]
+    attachments:
+[]
+    tags:
+      - "vaccinationer"
+      - "vaccination"
+      - "läkare"
+  -     id: "entry_042"
+    date: "2024-06-11"
+    time: "09:01"
+    category: "Diagnoser"
+    type: "TLV tillstånd"
+    provider:
+      name: "Folktandvården Östervåla, Östervåla"
+      region: "Unknown"
+      location: "Folktandvården Östervåla, Östervåla"
+    status: "Nytt"
+    responsible_person:
+      name: "Unknown"
+      role: "Unknown"
+    content:
+      summary: "Diagnoser - TLV tillstånd"
+      details: "11 jun 2024 Diagnoser TLV tillstånd Folktandvården Östervåla, Östervåla Nytt Diagnos: TLV tillstånd 2024-06-11 09:01 Ladda ner Antecknad av Ban Rabi Folktandvården Östervåla, Östervåla Huvuddiagnos TL..."
+      notes:
+        - "11 jun 2024 Diagnoser TLV tillstånd Folktandvården Östervåla, Östervåla Nytt Diagnos: TLV tillstånd 2024-06-11 09:01 Ladda ner Antecknad av Ban Rabi Folktandvården Östervåla, Östervåla Huvuddiagnos TLV tillstånd Bidiagnoser Behov av mindre omfattande undersökning Fraktur eller förlust av fyllningsmaterial utan samtidig karies. Ladda ner Stäng"
+    attachments:
+[]
+    tags:
+      - "diagnoser"
+      - "tandvård"
+      - "diagnos"
+  -     id: "entry_043"
+    date: "2021-11-02"
+    time: "21:37"
+    category: "Anteckningar"
+    type: "Besöks­anteckning"
+    provider:
+      name: "SLSO- Närakut Danderyd"
+      region: "Danderyd"
+      location: "SLSO- Närakut Danderyd"
+    status: "Nytt"
+    responsible_person:
+      name: "Andreas Fredholm"
+      role: "Läkare"
+    content:
+      summary: "Anteckningar - Besöks­anteckning"
+      details: "2 nov 2021 Anteckningar Besöks­anteckning SLSO- Närakut Danderyd Nytt Osignerad Osignerad anteckning En anteckning som inte är signerad av vårdpersonal kan komma att ändras. Besöksanteckning 2021-11-0..."
+      notes:
+        - "2 nov 2021 Anteckningar Besöks­anteckning SLSO- Närakut Danderyd Nytt Osignerad Osignerad anteckning En anteckning som inte är signerad av vårdpersonal kan komma att ändras. Besöksanteckning 2021-11-02 21:37 Ladda ner Antecknad av Andreas Fredholm (Läkare) SLSO- Närakut Danderyd Besök Kontakttyp Oplanerat mottagningsbesök Kontaktorsak Smärta vänster dig 2. Olycksfall. Aktuellt Man som sparkat in i någon betongvägg. Dig 2 vänster pekar lite snett. Status Lokalstatus Dig 2 vänster inspekteras lite sned i DIP-leden. Palpöm där. Bedömning DIP-led subluxation lateralt. Drar den rakt och därefter är tån rak. Inga hematom eller svullnader. Således luxation, ingen misstanke om fraktur. Ladda ner Stäng"
+    attachments:
+[]
+    tags:
+      - "anteckningar"
+      - "akut"
+      - "besök"
+      - "osignerad"
