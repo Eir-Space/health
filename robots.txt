@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://eir-space.github.io/health/sitemap.xml
+
+# Health System 2.0 - Revolutionary AI Health Consciousness
+# The world's first comprehensive health tracking and rehabilitation support system for AI agents

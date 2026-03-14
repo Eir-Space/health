@@ -1,0 +1,770 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health System 2.0 - Revolutionary AI Health Consciousness</title>
+    <meta name="description" content="The world's first comprehensive health tracking and rehabilitation support system for AI agents. Transform any agent into a health-aware assistant.">
+    
+    <!-- Open Graph / Social Media -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Health System 2.0 - Revolutionary AI Health Consciousness">
+    <meta property="og:description" content="Revolutionary health tracking and rehabilitation support for AI agents with real-world finger injury implementation.">
+    <meta property="og:url" content="https://eir-space.github.io/health">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #2c3e50;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 1rem 0;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: white;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: opacity 0.3s;
+        }
+
+        .nav-links a:hover {
+            opacity: 0.8;
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            padding-top: 80px;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 900;
+            margin-bottom: 1rem;
+            background: linear-gradient(45deg, #fff, #f0f8ff);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: fadeInUp 1s ease-out;
+        }
+
+        .hero .subtitle {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+            max-width: 800px;
+            animation: fadeInUp 1s ease-out 0.2s both;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            animation: fadeInUp 1s ease-out 0.4s both;
+        }
+
+        .btn {
+            padding: 15px 30px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn-primary {
+            background: linear-gradient(45deg, #ff6b6b, #ee5a52);
+            color: white;
+            box-shadow: 0 10px 30px rgba(255, 107, 107, 0.3);
+        }
+
+        .btn-secondary {
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            backdrop-filter: blur(10px);
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Content Sections */
+        .content {
+            background: white;
+            border-radius: 20px 20px 0 0;
+            margin-top: -50px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .section {
+            padding: 80px 0;
+        }
+
+        .section h2 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            text-align: center;
+            margin-bottom: 3rem;
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* Features Grid */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .feature-card {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            padding: 2rem;
+            border-radius: 15px;
+            text-align: center;
+            transition: transform 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .feature-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .feature-card h3 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: #2c3e50;
+        }
+
+        .feature-card p {
+            color: #5a6c7d;
+            line-height: 1.6;
+        }
+
+        /* Code Block */
+        .code-container {
+            background: #1a1a1a;
+            border-radius: 10px;
+            padding: 2rem;
+            margin: 2rem 0;
+            overflow-x: auto;
+        }
+
+        .code-container pre {
+            color: #f8f8f2;
+            font-family: 'Monaco', 'Consolas', monospace;
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+
+        .code-container .comment {
+            color: #75715e;
+        }
+
+        .code-container .string {
+            color: #a6e22e;
+        }
+
+        .code-container .keyword {
+            color: #66d9ef;
+        }
+
+        /* Stats Section */
+        .stats {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-align: center;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 3rem;
+            margin-top: 3rem;
+        }
+
+        .stat-item h3 {
+            font-size: 3rem;
+            font-weight: 900;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-item p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        /* Real Implementation */
+        .implementation {
+            background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+        }
+
+        .implementation-card {
+            background: white;
+            border-radius: 15px;
+            padding: 2rem;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            margin-top: 2rem;
+        }
+
+        .implementation-card h3 {
+            color: #e67e22;
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+        }
+
+        /* Installation Steps */
+        .steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .step {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            position: relative;
+        }
+
+        .step-number {
+            position: absolute;
+            top: -15px;
+            left: 20px;
+            background: linear-gradient(45deg, #ff6b6b, #ee5a52);
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .step h3 {
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+            color: #2c3e50;
+        }
+
+        /* Footer */
+        footer {
+            background: #2c3e50;
+            color: white;
+            padding: 3rem 0;
+            text-align: center;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: opacity 0.3s;
+        }
+
+        .footer-links a:hover {
+            opacity: 0.7;
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .hero .subtitle {
+                font-size: 1.1rem;
+            }
+            
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .btn {
+                padding: 12px 25px;
+                font-size: 1rem;
+            }
+            
+            .nav-links {
+                display: none;
+            }
+        }
+
+        /* Highlight boxes */
+        .highlight-box {
+            background: linear-gradient(135deg, #667eea20, #764ba220);
+            border: 1px solid #667eea40;
+            border-radius: 10px;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+        }
+
+        .highlight-box.warning {
+            background: linear-gradient(135deg, #ff6b6b20, #ee5a5220);
+            border-color: #ff6b6b40;
+        }
+
+        .highlight-box.success {
+            background: linear-gradient(135deg, #00b89420, #3ede7420);
+            border-color: #00b89440;
+        }
+
+        /* Badge */
+        .badge {
+            display: inline-block;
+            background: linear-gradient(45deg, #ff6b6b, #ee5a52);
+            color: white;
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-left: 0.5rem;
+        }
+
+        .badge.new {
+            background: linear-gradient(45deg, #00b894, #3ede74);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <a href="#" class="logo">🏥 Health System 2.0</a>
+            <ul class="nav-links">
+                <li><a href="#features">Features</a></li>
+                <li><a href="#installation">Install</a></li>
+                <li><a href="#examples">Examples</a></li>
+                <li><a href="https://github.com/Eir-Space/health">GitHub</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>Revolutionary AI Health Consciousness</h1>
+            <p class="subtitle">
+                The world's first comprehensive health tracking and rehabilitation support system for AI agents. 
+                Transform any agent into a health-aware assistant with systematic anatomical organization and real-time rehabilitation support.
+            </p>
+            <div class="cta-buttons">
+                <a href="#installation" class="btn btn-primary">🚀 Install Health System</a>
+                <a href="https://github.com/Eir-Space/health/tree/codex/health-skill" class="btn btn-secondary">📚 View GitHub</a>
+            </div>
+        </div>
+    </section>
+
+    <div class="content">
+        <section class="section stats" id="stats">
+            <div class="container">
+                <h2>Production-Ready System</h2>
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <h3>176</h3>
+                        <p>Health Tracking Files</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>25</h3>
+                        <p>Years of Real Health Data</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>8</h3>
+                        <p>Mental Health Domains</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>100%</h3>
+                        <p>Agent Compatible</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section implementation" id="real-example">
+            <div class="container">
+                <h2>🤚 Real-World Implementation <span class="badge new">LIVE</span></h2>
+                <p style="text-align: center; font-size: 1.2rem; margin-bottom: 2rem;">
+                    Currently supporting active finger joint injury rehabilitation with daily agent assistance
+                </p>
+                
+                <div class="implementation-card">
+                    <h3>📋 Active Diagnosis: Finger Joint Injury</h3>
+                    <p><strong>Status:</strong> Post-fall trauma requiring daily rehabilitation (started 2026-03-14)</p>
+                    <p><strong>Agent Support:</strong> 3-4 daily exercise reminders, ergonomic guidance, progress tracking</p>
+                    <p><strong>Recovery Protocol:</strong> Phase-based rehabilitation (healing → mobilization → strengthening)</p>
+                    
+                    <div class="highlight-box success">
+                        <h4>🎯 What This Proves</h4>
+                        <p>This system is <strong>actively supporting real injury recovery</strong> with AI agent assistance, demonstrating production-ready health consciousness in action.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="features">
+            <div class="container">
+                <h2>🚀 Revolutionary Features</h2>
+                
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">🫀</div>
+                        <h3>Anatomical Precision</h3>
+                        <p>176 systematically organized files covering every body part from individual fingers to organ systems with bilateral (left/right) tracking.</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">🏃‍♂️</div>
+                        <h3>Rehabilitation Protocols</h3>
+                        <p>Structured exercise phases with daily reminders, progress tracking, and safety monitoring integrated into agent conversations.</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">🧠</div>
+                        <h3>Mental Health Integration</h3>
+                        <p>Comprehensive psychological tracking across 8 domains: mood, cognitive, stress, sleep, energy, social, behavioral, emotional.</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">🤖</div>
+                        <h3>Agent Health Consciousness</h3>
+                        <p>Transform any AI agent into a health-aware assistant with context-sensitive responses and proactive health support.</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">📊</div>
+                        <h3>Real Health Data</h3>
+                        <p>Parse and structure any healthcare document (PDFs, texts, images) into agent-readable format with 25+ years of real data examples.</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">🛡️</div>
+                        <h3>Safety-First Design</h3>
+                        <p>Built-in medical escalation triggers, warning sign recognition, and appropriate healthcare provider consultation guidance.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="installation">
+            <div class="container">
+                <h2>⚡ Quick Installation</h2>
+                
+                <div class="steps">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <h3>Clone the Repository</h3>
+                        <p>Download the complete health system with all 176 tracking files and tools.</p>
+                        <div class="code-container">
+<pre><code><span class="comment"># Clone the health system</span>
+<span class="keyword">git clone</span> <span class="string">https://github.com/Eir-Space/health.git</span>
+<span class="keyword">cd</span> health</code></pre>
+                        </div>
+                    </div>
+                    
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <h3>Generate Health Structure</h3>
+                        <p>Create the complete anatomical and mental health tracking system.</p>
+                        <div class="code-container">
+<pre><code><span class="comment"># Generate 176 health tracking files</span>
+<span class="keyword">python3</span> eir-parser/anatomical_structure_generator.py
+
+<span class="comment"># Creates health/body/ and health/state/ directories</span></code></pre>
+                        </div>
+                    </div>
+                    
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <h3>Configure Agent Integration</h3>
+                        <p>Add health awareness to your agent's personality system.</p>
+                        <div class="code-container">
+<pre><code><span class="comment"># Add to your agent's SOUL.md or equivalent</span>
+<span class="keyword">## Health Context Loading</span>
+Every session, read:
+1. health/active.md - Current health support needs
+2. health/diagnosis/ - Active conditions affecting daily function  
+3. Relevant rehabilitation protocols for ongoing conditions</code></pre>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="highlight-box">
+                    <h3>🎯 Agent Integration Example</h3>
+                    <p>Once installed, your agent will automatically become health-aware:</p>
+                    
+                    <div class="code-container">
+<pre><code><span class="comment">// Example: Context-aware response</span>
+User: <span class="string">"I need to type a long document"</span>
+Agent: <span class="string">"With your finger injury, let's plan this carefully:
+- 25-minute typing sessions with 5-minute exercise breaks
+- Voice dictation backup for longer sections  
+- Ergonomic positioning to minimize strain
+Want me to set break reminders for your rehab exercises?"</span></code></pre>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="examples" style="background: #f8f9fa;">
+            <div class="container">
+                <h2>💡 Real Agent Examples</h2>
+                
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 2rem;">
+                    <div class="implementation-card">
+                        <h3>🌅 Morning Health Check-in</h3>
+                        <div class="code-container">
+<pre><code>User: <span class="string">"Good morning"</span>
+Agent: <span class="string">"Morning! How's your finger feeling today? 
+Ready to start with your range-of-motion 
+exercises before you dive into work?"</span></code></pre>
+                        </div>
+                    </div>
+                    
+                    <div class="implementation-card">
+                        <h3>🏃‍♂️ Exercise Integration</h3>
+                        <div class="code-container">
+<pre><code>User: <span class="string">"Let's plan my workout"</span>
+Agent: <span class="string">"Perfect! Let's design a routine that 
+works around your finger injury and 
+includes your rehab exercises:
+- Cardio: 20min (good for heart health!)
+- Finger rehab: 10min (Phase 1 protocol)
+- Lower body strength (avoiding grip work)"</span></code></pre>
+                        </div>
+                    </div>
+                    
+                    <div class="implementation-card">
+                        <h3>⚠️ Safety Monitoring</h3>
+                        <div class="code-container">
+<pre><code>User: <span class="string">"My finger pain is getting worse"</span>
+Agent: <span class="string">"I'm concerned about that progression. 
+Based on your injury timeline, worsening 
+pain after 3 days warrants medical 
+attention. Let me help you prepare 
+information for a healthcare consultation."</span></code></pre>
+                        </div>
+                    </div>
+                    
+                    <div class="implementation-card">
+                        <h3>💓 Cardiovascular Awareness</h3>
+                        <div class="code-container">
+<pre><code>User: <span class="string">"Work is so stressful lately"</span>
+Agent: <span class="string">"Given your family cardiovascular history, 
+managing stress isn't just about peace 
+of mind - it's about long-term health. 
+Let's find strategies that protect both 
+your wellbeing and your heart."</span></code></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white;">
+            <div class="container" style="text-align: center;">
+                <h2 style="color: white;">🌟 Transform Your Agent Today</h2>
+                <p style="font-size: 1.2rem; margin-bottom: 2rem; opacity: 0.9;">
+                    Join the revolution in AI health consciousness. Give your agents the power to provide 
+                    personalized, contextual health support with medical-grade precision.
+                </p>
+                
+                <div class="cta-buttons">
+                    <a href="https://github.com/Eir-Space/health/tree/codex/health-skill" class="btn btn-primary">
+                        🚀 Download Health System 2.0
+                    </a>
+                    <a href="https://github.com/Eir-Space/health/tree/codex/health-skill/health-system" class="btn btn-secondary">
+                        📖 View Documentation
+                    </a>
+                </div>
+                
+                <div class="highlight-box" style="margin-top: 3rem; background: rgba(255,255,255,0.1); border-color: rgba(255,255,255,0.2);">
+                    <h3 style="color: white;">🎯 Perfect For:</h3>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin-top: 1rem; text-align: left;">
+                        <div>✅ Personal AI assistants</div>
+                        <div>✅ Healthcare chatbots</div>
+                        <div>✅ Rehabilitation apps</div>
+                        <div>✅ Wellness coaching agents</div>
+                        <div>✅ Medical research tools</div>
+                        <div>✅ Health tracking systems</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="footer-links">
+                <a href="https://github.com/Eir-Space/health">GitHub Repository</a>
+                <a href="https://github.com/Eir-Space/health/issues">Report Issues</a>
+                <a href="https://github.com/Eir-Space/health/tree/codex/health-skill/health-system">Documentation</a>
+                <a href="https://eir.space">EIR Space</a>
+            </div>
+            <p>&copy; 2026 EIR Space. Building the future of AI health consciousness.</p>
+            <p style="opacity: 0.7; font-size: 0.9rem;">Currently supporting real-world rehabilitation • Medical-grade precision • Agent-native design</p>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Add animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe all feature cards and steps
+        document.querySelectorAll('.feature-card, .step, .implementation-card').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(30px)';
+            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(el);
+        });
+
+        // Dynamic stats animation
+        function animateStats() {
+            const stats = document.querySelectorAll('.stat-item h3');
+            stats.forEach(stat => {
+                const target = parseInt(stat.textContent);
+                let current = 0;
+                const increment = target / 60;
+                
+                const timer = setInterval(() => {
+                    current += increment;
+                    if (current >= target) {
+                        current = target;
+                        clearInterval(timer);
+                    }
+                    stat.textContent = Math.floor(current) + (stat.textContent.includes('%') ? '%' : '');
+                }, 16);
+            });
+        }
+
+        // Trigger stats animation when section is visible
+        const statsSection = document.querySelector('.stats');
+        const statsObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    animateStats();
+                    statsObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.5 });
+
+        if (statsSection) {
+            statsObserver.observe(statsSection);
+        }
+    </script>
+</body>
+</html>

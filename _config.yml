@@ -1,0 +1,57 @@
+# GitHub Pages configuration for Health System 2.0
+title: "Health System 2.0 - Revolutionary AI Health Consciousness"
+description: "The world's first comprehensive health tracking and rehabilitation support system for AI agents"
+url: "https://eir-space.github.io"
+baseurl: "/health"
+
+# GitHub info
+github_username: Eir-Space
+repository: health
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+theme: minima
+
+# Exclude files from processing
+exclude:
+  - health/data/
+  - eir-parser/examples/
+  - "*.py"
+  - "*.yml"
+  - README.md
+
+# SEO
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+# Site metadata
+author:
+  name: "Birger Moell"
+  email: "birger.moell@gmail.com"
+
+# Social media
+social:
+  links:
+    - https://github.com/Eir-Space/health
+    - https://eir.space
+
+# OpenGraph defaults
+defaults:
+  - scope:
+      path: ""
+    values:
+      image: "/assets/og-image.jpg"
+      
+# Custom variables
+health_system:
+  version: "2.0"
+  files_count: 176
+  features:
+    - "Anatomical health tracking"
+    - "Rehabilitation protocols"  
+    - "Mental health integration"
+    - "Agent consciousness"
+    - "Real-world implementation"
+    - "Safety-first design"
