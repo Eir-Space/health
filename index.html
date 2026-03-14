@@ -1,962 +1,1341 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EIR Health System - AI Health Consciousness for Agents</title>
-    <meta name="description" content="Production-ready health tracking and rehabilitation support system for AI agents. Swedish-engineered, privacy-first, built to ship.">
-    
-    <!-- Open Graph / Social Media -->
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="EIR Health System - AI Health Consciousness for Agents">
-    <meta property="og:description" content="Production-ready health tracking and rehabilitation support system for AI agents. Swedish-engineered, privacy-first.">
-    <meta property="og:url" content="https://eir-space.github.io/health">
-    
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        :root {
-            --primary-color: #2c3e50;
-            --secondary-color: #34495e;
-            --accent-color: #3498db;
-            --success-color: #27ae60;
-            --warning-color: #f39c12;
-            --danger-color: #e74c3c;
-            --light-bg: #f8f9fa;
-            --white: #ffffff;
-            --text-light: #6c757d;
-            --border-color: #e9ecef;
-            --shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-        }
-
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-            line-height: 1.6;
-            color: var(--primary-color);
-            background: var(--white);
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 24px;
-        }
-
-        /* Header */
-        header {
-            background: var(--white);
-            border-bottom: 1px solid var(--border-color);
-            padding: 1rem 0;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            backdrop-filter: blur(10px);
-        }
-
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: var(--primary-color);
-            text-decoration: none;
-        }
-
-        .logo-icon {
-            width: 32px;
-            height: 32px;
-            background: linear-gradient(135deg, var(--accent-color), var(--success-color));
-            border-radius: 8px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 18px;
-        }
-
-        .nav-links {
-            display: flex;
-            list-style: none;
-            gap: 2rem;
-        }
-
-        .nav-links a {
-            color: var(--secondary-color);
-            text-decoration: none;
-            font-weight: 500;
-            transition: color 0.3s;
-        }
-
-        .nav-links a:hover {
-            color: var(--accent-color);
-        }
-
-        /* Hero Section */
-        .hero {
-            padding: 80px 0;
-            background: var(--light-bg);
-        }
-
-        .hero-content {
-            max-width: 800px;
-        }
-
-        .hero h1 {
-            font-size: 3rem;
-            font-weight: 800;
-            margin-bottom: 1rem;
-            color: var(--primary-color);
-            line-height: 1.2;
-        }
-
-        .hero .subtitle {
-            font-size: 1.25rem;
-            margin-bottom: 2rem;
-            color: var(--text-light);
-            line-height: 1.5;
-        }
-
-        .hero-stats {
-            display: flex;
-            gap: 3rem;
-            margin: 3rem 0;
-            flex-wrap: wrap;
-        }
-
-        .stat {
-            text-align: left;
-        }
-
-        .stat-number {
-            font-size: 2rem;
-            font-weight: 700;
-            color: var(--accent-color);
-            margin-bottom: 0.5rem;
-        }
-
-        .stat-label {
-            font-size: 0.9rem;
-            color: var(--text-light);
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-
-        .cta-buttons {
-            display: flex;
-            gap: 1rem;
-            margin-top: 2rem;
-            flex-wrap: wrap;
-        }
-
-        .btn {
-            padding: 12px 24px;
-            font-size: 1rem;
-            font-weight: 600;
-            border: none;
-            border-radius: 8px;
-            cursor: pointer;
-            text-decoration: none;
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            transition: all 0.3s ease;
-        }
-
-        .btn-primary {
-            background: var(--accent-color);
-            color: white;
-        }
-
-        .btn-secondary {
-            background: var(--white);
-            color: var(--primary-color);
-            border: 2px solid var(--border-color);
-        }
-
-        .btn:hover {
-            transform: translateY(-2px);
-            box-shadow: var(--shadow);
-        }
-
-        /* Content Sections */
-        .section {
-            padding: 80px 0;
-        }
-
-        .section-header {
-            text-align: center;
-            margin-bottom: 4rem;
-        }
-
-        .section h2 {
-            font-size: 2.5rem;
-            font-weight: 700;
-            margin-bottom: 1rem;
-            color: var(--primary-color);
-        }
-
-        .section-subtitle {
-            font-size: 1.1rem;
-            color: var(--text-light);
-            max-width: 600px;
-            margin: 0 auto;
-        }
-
-        /* Real Implementation Banner */
-        .implementation-banner {
-            background: linear-gradient(135deg, #e8f5e8, #f0f8f0);
-            border: 1px solid #c8e6c9;
-            border-radius: 12px;
-            padding: 2rem;
-            margin: 2rem 0;
-            position: relative;
-        }
-
-        .banner-tag {
-            position: absolute;
-            top: -8px;
-            left: 24px;
-            background: var(--success-color);
-            color: white;
-            padding: 4px 12px;
-            border-radius: 4px;
-            font-size: 0.8rem;
-            font-weight: 600;
-            text-transform: uppercase;
-        }
-
-        .implementation-banner h3 {
-            color: var(--success-color);
-            margin-bottom: 1rem;
-        }
-
-        /* Feature Grid */
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
-        }
-
-        .feature-card {
-            background: var(--white);
-            padding: 2rem;
-            border-radius: 12px;
-            border: 1px solid var(--border-color);
-            transition: all 0.3s ease;
-        }
-
-        .feature-card:hover {
-            transform: translateY(-4px);
-            box-shadow: var(--shadow);
-        }
-
-        .feature-number {
-            display: inline-block;
-            background: var(--accent-color);
-            color: white;
-            width: 32px;
-            height: 32px;
-            border-radius: 50%;
-            text-align: center;
-            line-height: 32px;
-            font-weight: 600;
-            margin-bottom: 1rem;
-            font-size: 0.9rem;
-        }
-
-        .feature-card h3 {
-            font-size: 1.3rem;
-            font-weight: 600;
-            margin-bottom: 1rem;
-            color: var(--primary-color);
-        }
-
-        .feature-card p {
-            color: var(--text-light);
-            line-height: 1.6;
-        }
-
-        /* Architecture Section */
-        .architecture {
-            background: var(--light-bg);
-        }
-
-        .arch-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
-        }
-
-        .arch-card {
-            background: var(--white);
-            padding: 2rem;
-            border-radius: 12px;
-            border: 1px solid var(--border-color);
-        }
-
-        .arch-card h4 {
-            color: var(--primary-color);
-            margin-bottom: 1rem;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-
-        .arch-list {
-            list-style: none;
-            margin-top: 1rem;
-        }
-
-        .arch-list li {
-            padding: 0.5rem 0;
-            border-bottom: 1px solid var(--border-color);
-            display: flex;
-            justify-content: space-between;
-        }
-
-        .arch-list li:last-child {
-            border-bottom: none;
-        }
-
-        /* Code Block */
-        .code-container {
-            background: var(--primary-color);
-            border-radius: 8px;
-            padding: 1.5rem;
-            margin: 2rem 0;
-            overflow-x: auto;
-        }
-
-        .code-container pre {
-            color: #f8f8f2;
-            font-family: 'Monaco', 'Consolas', monospace;
-            font-size: 0.9rem;
-            line-height: 1.5;
-        }
-
-        .code-container .comment {
-            color: #75715e;
-        }
-
-        .code-container .string {
-            color: #a6e22e;
-        }
-
-        .code-container .keyword {
-            color: #66d9ef;
-        }
-
-        /* Installation Steps */
-        .installation-steps {
-            margin-top: 3rem;
-        }
-
-        .step {
-            background: var(--white);
-            border: 1px solid var(--border-color);
-            border-radius: 12px;
-            margin-bottom: 1.5rem;
-            overflow: hidden;
-        }
-
-        .step-header {
-            background: var(--light-bg);
-            padding: 1.5rem;
-            border-bottom: 1px solid var(--border-color);
-        }
-
-        .step-title {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            font-weight: 600;
-            color: var(--primary-color);
-        }
-
-        .step-content {
-            padding: 1.5rem;
-        }
-
-        /* Deployment Section */
-        .deployment {
-            background: var(--primary-color);
-            color: white;
-        }
-
-        .deployment h2,
-        .deployment h3 {
-            color: white;
-        }
-
-        .deployment .section-subtitle {
-            color: rgba(255, 255, 255, 0.8);
-        }
-
-        .deployment-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
-        }
-
-        .deployment-card {
-            background: rgba(255, 255, 255, 0.1);
-            padding: 2rem;
-            border-radius: 12px;
-            border: 1px solid rgba(255, 255, 255, 0.2);
-        }
-
-        .deployment-card h4 {
-            color: white;
-            margin-bottom: 1rem;
-        }
-
-        .deployment-list {
-            list-style: none;
-            margin-top: 1rem;
-        }
-
-        .deployment-list li {
-            color: rgba(255, 255, 255, 0.8);
-            padding: 0.5rem 0;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-
-        .deployment-list li::before {
-            content: "→";
-            color: white;
-        }
-
-        /* Footer */
-        footer {
-            background: var(--light-bg);
-            padding: 3rem 0;
-            border-top: 1px solid var(--border-color);
-        }
-
-        .footer-content {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            margin-bottom: 2rem;
-        }
-
-        .footer-section h4 {
-            color: var(--primary-color);
-            margin-bottom: 1rem;
-        }
-
-        .footer-links {
-            list-style: none;
-        }
-
-        .footer-links a {
-            color: var(--text-light);
-            text-decoration: none;
-            display: block;
-            padding: 0.25rem 0;
-            transition: color 0.3s;
-        }
-
-        .footer-links a:hover {
-            color: var(--accent-color);
-        }
-
-        .footer-bottom {
-            text-align: center;
-            padding-top: 2rem;
-            border-top: 1px solid var(--border-color);
-            color: var(--text-light);
-        }
-
-        /* Responsive */
-        @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 2.5rem;
-            }
-            
-            .hero-stats {
-                gap: 2rem;
-            }
-            
-            .nav-links {
-                display: none;
-            }
-
-            .features-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .cta-buttons {
-                flex-direction: column;
-            }
-
-            .btn {
-                justify-content: center;
-            }
-        }
-
-        /* Highlight boxes */
-        .highlight-box {
-            background: var(--light-bg);
-            border: 1px solid var(--border-color);
-            border-radius: 8px;
-            padding: 1.5rem;
-            margin: 1.5rem 0;
-        }
-
-        .highlight-box.success {
-            background: #e8f5e8;
-            border-color: #c8e6c9;
-        }
-
-        .highlight-box.warning {
-            background: #fff3cd;
-            border-color: #ffeaa7;
-        }
-
-        /* Badge */
-        .badge {
-            display: inline-block;
-            background: var(--success-color);
-            color: white;
-            padding: 0.25rem 0.75rem;
-            border-radius: 12px;
-            font-size: 0.8rem;
-            font-weight: 600;
-            margin-left: 0.5rem;
-            text-transform: uppercase;
-        }
-
-        .badge.live {
-            background: var(--danger-color);
-            animation: pulse 2s infinite;
-        }
-
-        @keyframes pulse {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0.7; }
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EIR Health System | Agent-Native Health Context</title>
+  <meta
+    name="description"
+    content="Production-ready health tracking and rehabilitation support for AI agents. Swedish-engineered, privacy-first, and aligned with the Eir design system."
+  >
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="EIR Health System | Agent-Native Health Context">
+  <meta
+    property="og:description"
+    content="Systematic health tracking, rehabilitation support, and privacy-first agent integration for real-world health workflows."
+  >
+  <meta property="og:url" content="https://eir-space.github.io/health/">
+  <meta name="theme-color" content="#111110">
+  <link
+    rel="icon"
+    href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 320 320' fill='none'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='24' y1='24' x2='296' y2='296' gradientUnits='userSpaceOnUse'%3E%3Cstop stop-color='%23D4A76A'/%3E%3Cstop offset='.34' stop-color='%23C9B88A'/%3E%3Cstop offset='.72' stop-color='%23A8C5D4'/%3E%3Cstop offset='1' stop-color='%231E94A8'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='320' height='320' rx='72' fill='url(%23g)'/%3E%3Cpath d='M160 72V248' stroke='white' stroke-linecap='round' stroke-width='22'/%3E%3Cpath d='M160 120L94 168' stroke='white' stroke-linecap='round' stroke-width='22'/%3E%3Cpath d='M160 120L226 168' stroke='white' stroke-linecap='round' stroke-width='22'/%3E%3C/svg%3E"
+  >
+
+  <style>
+    :root {
+      --eir-50: #f0fafb;
+      --eir-100: #d5eff4;
+      --eir-200: #abe0ea;
+      --eir-300: #74cbd8;
+      --eir-400: #3db5c6;
+      --eir-500: #1e94a8;
+      --eir-600: #197a8e;
+      --eir-700: #1a6474;
+      --eir-800: #1c5260;
+      --eir-900: #1b4350;
+      --eir-950: #0d2d37;
+
+      --gold-100: #fef0db;
+      --gold-300: #f5c178;
+      --gold-500: #d4a76a;
+      --gold-700: #96703e;
+
+      --blue-200: #b8dbef;
+      --blue-500: #4a8db4;
+      --blue-800: #234860;
+
+      --health-100: #dcfce7;
+      --health-500: #22c55e;
+      --health-800: #166534;
+
+      --sand-50: #fafaf7;
+      --sand-100: #f5f4f0;
+      --sand-200: #e8e6e1;
+      --sand-300: #d4d1cb;
+      --sand-400: #a8a49e;
+      --sand-500: #7a766f;
+      --sand-600: #5a5650;
+      --sand-700: #3d3a36;
+      --sand-800: #252320;
+      --sand-900: #1a1917;
+      --sand-950: #111110;
+
+      --eir-aura: linear-gradient(135deg, #d4a76a 0%, #c9b88a 30%, #a8c5d4 70%, #8bb8ce 100%);
+      --eir-aura-subtle: linear-gradient(
+        135deg,
+        rgba(212, 167, 106, 0.16) 0%,
+        rgba(139, 184, 206, 0.14) 100%
+      );
+
+      --space-1: 4px;
+      --space-2: 8px;
+      --space-3: 12px;
+      --space-4: 16px;
+      --space-6: 24px;
+      --space-8: 32px;
+      --space-10: 40px;
+      --space-12: 48px;
+      --space-16: 64px;
+      --space-20: 80px;
+
+      --radius-sm: 6px;
+      --radius-md: 8px;
+      --radius-lg: 12px;
+      --radius-xl: 16px;
+      --radius-2xl: 20px;
+      --radius-full: 9999px;
+
+      --dur-fast: 100ms;
+      --dur-base: 200ms;
+      --dur-slow: 300ms;
+
+      --shadow-soft: 0 18px 48px rgba(0, 0, 0, 0.22);
+      --shadow-card: 0 12px 32px rgba(0, 0, 0, 0.18);
+      --border-subtle: rgba(245, 244, 240, 0.1);
+      --border-strong: rgba(184, 219, 239, 0.22);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      min-height: 100vh;
+      font-family: "Geist Sans", "Avenir Next", "Segoe UI", sans-serif;
+      background:
+        radial-gradient(circle at top left, rgba(30, 148, 168, 0.18), transparent 32%),
+        radial-gradient(circle at top right, rgba(212, 167, 106, 0.18), transparent 26%),
+        linear-gradient(180deg, #151412 0%, #111110 55%, #171512 100%);
+      color: var(--sand-100);
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    img,
+    svg {
+      display: block;
+      max-width: 100%;
+    }
+
+    .page-shell {
+      position: relative;
+      overflow: clip;
+    }
+
+    .page-shell::before,
+    .page-shell::after {
+      content: "";
+      position: absolute;
+      inset: auto;
+      pointer-events: none;
+      filter: blur(0);
+    }
+
+    .page-shell::before {
+      top: 96px;
+      right: -120px;
+      width: 420px;
+      height: 420px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(30, 148, 168, 0.22), transparent 68%);
+    }
+
+    .page-shell::after {
+      top: 240px;
+      left: -140px;
+      width: 360px;
+      height: 360px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(212, 167, 106, 0.18), transparent 70%);
+    }
+
+    .container {
+      width: min(1180px, calc(100% - 32px));
+      margin: 0 auto;
+    }
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      border-bottom: 1px solid rgba(245, 244, 240, 0.08);
+      backdrop-filter: blur(18px);
+      background: rgba(17, 17, 16, 0.72);
+    }
+
+    .site-nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: var(--space-6);
+      min-height: 76px;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: var(--space-4);
+      text-decoration: none;
+    }
+
+    .brand-mark {
+      width: 44px;
+      height: 44px;
+      border-radius: 14px;
+      overflow: hidden;
+      box-shadow: 0 10px 28px rgba(139, 184, 206, 0.24);
+      flex: none;
+    }
+
+    .brand-copy {
+      display: grid;
+      gap: 2px;
+    }
+
+    .brand-name {
+      font-size: 0.95rem;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+    }
+
+    .brand-subtitle {
+      color: var(--sand-400);
+      font-size: 0.78rem;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: var(--space-6);
+      list-style: none;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: var(--sand-300);
+      font-size: 0.95rem;
+      transition: color var(--dur-fast) ease;
+    }
+
+    .nav-links a:hover,
+    .nav-links a:focus-visible {
+      color: var(--eir-200);
+    }
+
+    .nav-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: var(--space-2);
+      padding: 10px 16px;
+      border-radius: var(--radius-full);
+      border: 1px solid rgba(245, 244, 240, 0.12);
+      background: rgba(245, 244, 240, 0.04);
+    }
+
+    .hero {
+      padding: var(--space-16) 0 var(--space-12);
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.2fr) minmax(320px, 0.8fr);
+      gap: var(--space-8);
+      align-items: start;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 8px 14px;
+      margin-bottom: var(--space-6);
+      border: 1px solid rgba(212, 167, 106, 0.24);
+      border-radius: var(--radius-full);
+      background: rgba(212, 167, 106, 0.08);
+      color: var(--gold-100);
+      font-size: 0.82rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
+    .hero-copy h1 {
+      max-width: 11ch;
+      font-size: clamp(2.8rem, 7vw, 5rem);
+      line-height: 0.95;
+      letter-spacing: -0.05em;
+      margin-bottom: var(--space-6);
+    }
+
+    .hero-copy p {
+      max-width: 60ch;
+      color: var(--sand-300);
+      font-size: 1.08rem;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--space-4);
+      margin: var(--space-8) 0 var(--space-10);
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      min-height: 50px;
+      padding: 0 20px;
+      border-radius: var(--radius-full);
+      text-decoration: none;
+      font-weight: 700;
+      border: 1px solid transparent;
+      transition:
+        transform var(--dur-fast) ease,
+        border-color var(--dur-fast) ease,
+        background-color var(--dur-fast) ease,
+        box-shadow var(--dur-fast) ease;
+    }
+
+    .button:hover,
+    .button:focus-visible {
+      transform: translateY(-1px);
+    }
+
+    .button-primary {
+      color: #0f1110;
+      background: var(--eir-aura);
+      box-shadow: 0 18px 40px rgba(139, 184, 206, 0.22);
+    }
+
+    .button-secondary {
+      color: var(--sand-100);
+      background: rgba(245, 244, 240, 0.04);
+      border-color: rgba(245, 244, 240, 0.16);
+    }
+
+    .hero-stats {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: var(--space-4);
+    }
+
+    .stat-card {
+      padding: 20px;
+      border-radius: var(--radius-xl);
+      border: 1px solid var(--border-subtle);
+      background:
+        linear-gradient(180deg, rgba(245, 244, 240, 0.05), rgba(245, 244, 240, 0.03)),
+        rgba(26, 25, 23, 0.9);
+      box-shadow: var(--shadow-card);
+    }
+
+    .stat-value {
+      display: block;
+      margin-bottom: 8px;
+      color: var(--sand-50);
+      font-size: clamp(1.5rem, 4vw, 2.2rem);
+      font-weight: 800;
+      letter-spacing: -0.04em;
+    }
+
+    .stat-label {
+      color: var(--sand-400);
+      font-size: 0.84rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+
+    .hero-panel {
+      position: relative;
+      padding: 1px;
+      border-radius: 28px;
+      background: var(--eir-aura-subtle);
+      box-shadow: var(--shadow-soft);
+    }
+
+    .hero-panel::before {
+      content: "";
+      position: absolute;
+      inset: 14px 16px auto auto;
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(212, 167, 106, 0.24), transparent 70%);
+      pointer-events: none;
+    }
+
+    .panel-inner {
+      position: relative;
+      border-radius: 27px;
+      padding: 28px;
+      background:
+        linear-gradient(180deg, rgba(37, 35, 32, 0.98), rgba(26, 25, 23, 0.98));
+      border: 1px solid rgba(245, 244, 240, 0.08);
+    }
+
+    .panel-kicker {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 7px 12px;
+      border-radius: var(--radius-full);
+      background: rgba(34, 197, 94, 0.12);
+      color: var(--health-100);
+      font-size: 0.76rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      margin-bottom: var(--space-6);
+    }
+
+    .panel-title {
+      font-size: 1.5rem;
+      line-height: 1.1;
+      margin-bottom: var(--space-4);
+    }
+
+    .panel-body {
+      color: var(--sand-300);
+      margin-bottom: var(--space-6);
+    }
+
+    .signal-list,
+    .stack-list,
+    .footer-links,
+    .list-plain {
+      list-style: none;
+    }
+
+    .signal-list {
+      display: grid;
+      gap: 14px;
+      margin-bottom: var(--space-6);
+    }
+
+    .signal-list li {
+      display: flex;
+      justify-content: space-between;
+      gap: var(--space-4);
+      padding-bottom: 14px;
+      border-bottom: 1px solid rgba(245, 244, 240, 0.08);
+      color: var(--sand-200);
+      font-size: 0.95rem;
+    }
+
+    .signal-list li span:last-child {
+      color: var(--eir-200);
+      text-align: right;
+    }
+
+    .stack-list {
+      display: grid;
+      gap: 10px;
+    }
+
+    .stack-list li {
+      padding: 12px 14px;
+      border-radius: var(--radius-lg);
+      border: 1px solid rgba(245, 244, 240, 0.08);
+      background: rgba(245, 244, 240, 0.03);
+      color: var(--sand-300);
+      font-size: 0.92rem;
+    }
+
+    .section {
+      padding: var(--space-12) 0;
+    }
+
+    .section-head {
+      display: grid;
+      gap: var(--space-4);
+      max-width: 720px;
+      margin-bottom: var(--space-8);
+    }
+
+    .section-head.centered {
+      margin-inline: auto;
+      text-align: center;
+    }
+
+    .section-label {
+      color: var(--gold-300);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-size: 0.8rem;
+    }
+
+    .section-head h2 {
+      font-size: clamp(2rem, 4.5vw, 3rem);
+      line-height: 1.02;
+      letter-spacing: -0.04em;
+    }
+
+    .section-head p {
+      color: var(--sand-300);
+      font-size: 1.02rem;
+    }
+
+    .live-strip {
+      display: grid;
+      grid-template-columns: minmax(0, 1.25fr) minmax(280px, 0.75fr);
+      gap: var(--space-6);
+      padding: 28px;
+      border-radius: 28px;
+      border: 1px solid rgba(34, 197, 94, 0.2);
+      background:
+        linear-gradient(135deg, rgba(34, 197, 94, 0.12), rgba(30, 148, 168, 0.08)),
+        rgba(26, 25, 23, 0.88);
+      box-shadow: var(--shadow-card);
+    }
+
+    .live-copy {
+      display: grid;
+      gap: var(--space-4);
+    }
+
+    .live-tag {
+      display: inline-flex;
+      width: fit-content;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 12px;
+      border-radius: var(--radius-full);
+      background: rgba(34, 197, 94, 0.12);
+      color: var(--health-100);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-size: 0.78rem;
+    }
+
+    .live-metrics {
+      display: grid;
+      gap: 12px;
+      align-content: start;
+    }
+
+    .mini-card {
+      padding: 16px 18px;
+      border-radius: var(--radius-xl);
+      border: 1px solid rgba(245, 244, 240, 0.08);
+      background: rgba(17, 17, 16, 0.34);
+    }
+
+    .mini-card strong {
+      display: block;
+      margin-bottom: 6px;
+      color: var(--sand-50);
+      font-size: 0.95rem;
+    }
+
+    .mini-card span {
+      color: var(--sand-400);
+      font-size: 0.9rem;
+    }
+
+    .grid-3,
+    .grid-4,
+    .grid-2 {
+      display: grid;
+      gap: var(--space-5);
+    }
+
+    .grid-3 {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .grid-4 {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+
+    .grid-2 {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .feature-card,
+    .system-card,
+    .deployment-card,
+    .step-card,
+    .code-card,
+    .repo-card {
+      position: relative;
+      overflow: hidden;
+      padding: 24px;
+      border-radius: 24px;
+      border: 1px solid var(--border-subtle);
+      background:
+        linear-gradient(180deg, rgba(245, 244, 240, 0.05), rgba(245, 244, 240, 0.025)),
+        rgba(26, 25, 23, 0.94);
+      box-shadow: var(--shadow-card);
+    }
+
+    .feature-card::after,
+    .system-card::after,
+    .deployment-card::after,
+    .step-card::after {
+      content: "";
+      position: absolute;
+      inset: 0 auto auto 0;
+      width: 100%;
+      height: 1px;
+      background: linear-gradient(90deg, rgba(212, 167, 106, 0.4), transparent 68%);
+      opacity: 0.6;
+    }
+
+    .feature-index {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      margin-bottom: var(--space-4);
+      border-radius: 14px;
+      background: var(--eir-aura-subtle);
+      color: var(--sand-50);
+      font-weight: 800;
+      letter-spacing: 0.04em;
+    }
+
+    .feature-card h3,
+    .system-card h3,
+    .deployment-card h3,
+    .step-card h3,
+    .repo-card h3 {
+      margin-bottom: var(--space-3);
+      font-size: 1.2rem;
+      line-height: 1.1;
+    }
+
+    .feature-card p,
+    .system-card p,
+    .deployment-card p,
+    .step-card p,
+    .repo-card p {
+      color: var(--sand-300);
+    }
+
+    .system-card {
+      min-height: 100%;
+    }
+
+    .system-chip {
+      display: inline-flex;
+      width: fit-content;
+      margin-bottom: var(--space-4);
+      padding: 7px 12px;
+      border-radius: var(--radius-full);
+      background: rgba(184, 219, 239, 0.1);
+      color: var(--blue-200);
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    .list-plain {
+      display: grid;
+      gap: 12px;
+      margin-top: var(--space-5);
+    }
+
+    .list-plain li {
+      display: flex;
+      justify-content: space-between;
+      gap: var(--space-4);
+      padding-top: 12px;
+      border-top: 1px solid rgba(245, 244, 240, 0.08);
+      color: var(--sand-200);
+      font-size: 0.94rem;
+    }
+
+    .list-plain li span:last-child {
+      color: var(--sand-400);
+      text-align: right;
+    }
+
+    .installation-layout {
+      display: grid;
+      grid-template-columns: minmax(0, 1.1fr) minmax(320px, 0.9fr);
+      gap: var(--space-6);
+      align-items: start;
+    }
+
+    .steps {
+      display: grid;
+      gap: var(--space-5);
+    }
+
+    .step-top {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: var(--space-4);
+    }
+
+    .step-number {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 38px;
+      height: 38px;
+      border-radius: 14px;
+      background: rgba(30, 148, 168, 0.14);
+      color: var(--eir-200);
+      font-weight: 800;
+    }
+
+    .code-card {
+      background:
+        linear-gradient(180deg, rgba(13, 45, 55, 0.46), rgba(17, 17, 16, 0.94)),
+        rgba(17, 17, 16, 0.98);
+      border-color: rgba(61, 181, 198, 0.18);
+    }
+
+    .code-card h3 {
+      margin-bottom: var(--space-3);
+    }
+
+    .code-card p {
+      color: var(--sand-300);
+      margin-bottom: var(--space-5);
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 18px;
+      border-radius: 18px;
+      background: rgba(8, 12, 14, 0.76);
+      border: 1px solid rgba(184, 219, 239, 0.14);
+      color: var(--sand-100);
+      font-family: "Geist Mono", "SFMono-Regular", "Consolas", monospace;
+      font-size: 0.9rem;
+      line-height: 1.6;
+      white-space: pre-wrap;
+    }
+
+    code {
+      font-family: "Geist Mono", "SFMono-Regular", "Consolas", monospace;
+    }
+
+    .inline-code {
+      padding: 3px 7px;
+      border-radius: 8px;
+      background: rgba(245, 244, 240, 0.08);
+      color: var(--sand-100);
+      font-size: 0.94em;
+    }
+
+    .deployment {
+      position: relative;
+    }
+
+    .deployment::before {
+      content: "";
+      position: absolute;
+      inset: 80px 0 auto;
+      height: 320px;
+      background:
+        radial-gradient(circle at 20% 30%, rgba(212, 167, 106, 0.14), transparent 28%),
+        radial-gradient(circle at 80% 10%, rgba(30, 148, 168, 0.12), transparent 24%);
+      pointer-events: none;
+    }
+
+    .repo-card {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: var(--space-6);
+      padding: 28px;
+      margin-top: var(--space-8);
+    }
+
+    .repo-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--space-4);
+      justify-content: flex-end;
+    }
+
+    .site-footer {
+      padding: var(--space-10) 0;
+      border-top: 1px solid rgba(245, 244, 240, 0.08);
+      background: rgba(17, 17, 16, 0.72);
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.2fr) repeat(2, minmax(180px, 0.4fr));
+      gap: var(--space-6);
+      align-items: start;
+    }
+
+    .footer-copy p,
+    .footer-links a,
+    .footer-note {
+      color: var(--sand-400);
+    }
+
+    .footer-links {
+      display: grid;
+      gap: 10px;
+    }
+
+    .footer-links a {
+      text-decoration: none;
+      transition: color var(--dur-fast) ease;
+    }
+
+    .footer-links a:hover,
+    .footer-links a:focus-visible {
+      color: var(--eir-200);
+    }
+
+    .footer-heading {
+      margin-bottom: var(--space-4);
+      font-size: 0.92rem;
+      color: var(--sand-100);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    .footer-note {
+      margin-top: var(--space-8);
+      padding-top: var(--space-5);
+      border-top: 1px solid rgba(245, 244, 240, 0.08);
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 1080px) {
+      .hero-grid,
+      .installation-layout,
+      .live-strip,
+      .repo-card,
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .grid-4 {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .grid-3 {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .repo-actions {
+        justify-content: flex-start;
+      }
+    }
+
+    @media (max-width: 780px) {
+      .site-nav {
+        min-height: 72px;
+      }
+
+      .nav-links {
+        display: none;
+      }
+
+      .hero {
+        padding-top: var(--space-12);
+      }
+
+      .hero-stats,
+      .grid-4,
+      .grid-3,
+      .grid-2 {
+        grid-template-columns: 1fr;
+      }
+
+      .button,
+      .hero-actions,
+      .repo-actions {
+        width: 100%;
+      }
+
+      .button {
+        min-height: 52px;
+      }
+
+      .hero-copy h1 {
+        max-width: none;
+      }
+
+      .panel-inner,
+      .feature-card,
+      .system-card,
+      .deployment-card,
+      .step-card,
+      .code-card,
+      .repo-card,
+      .live-strip {
+        padding: 20px;
+      }
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <nav class="container">
-            <a href="#" class="logo">
-                <div class="logo-icon">🏥</div>
-                <span>EIR Health System</span>
-            </a>
-            <ul class="nav-links">
-                <li><a href="#architecture">Architecture</a></li>
-                <li><a href="#installation">Installation</a></li>
-                <li><a href="#deployment">Deployment</a></li>
-                <li><a href="https://github.com/Eir-Space/health">GitHub</a></li>
-            </ul>
+  <div class="page-shell">
+    <header class="site-header">
+      <div class="container">
+        <nav class="site-nav" aria-label="Primary">
+          <a class="brand" href="#">
+            <span class="brand-mark" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 320" fill="none">
+                <defs>
+                  <linearGradient id="eir-rune-bg" x1="24" y1="24" x2="296" y2="296" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#D4A76A"/>
+                    <stop offset=".34" stop-color="#C9B88A"/>
+                    <stop offset=".72" stop-color="#A8C5D4"/>
+                    <stop offset="1" stop-color="#1E94A8"/>
+                  </linearGradient>
+                </defs>
+                <rect width="320" height="320" rx="72" fill="url(#eir-rune-bg)"/>
+                <path d="M160 72V248" stroke="white" stroke-linecap="round" stroke-width="22"/>
+                <path d="M160 120L94 168" stroke="white" stroke-linecap="round" stroke-width="22"/>
+                <path d="M160 120L226 168" stroke="white" stroke-linecap="round" stroke-width="22"/>
+              </svg>
+            </span>
+            <span class="brand-copy">
+              <span class="brand-name">EIR Health System</span>
+              <span class="brand-subtitle">Agent-native health context</span>
+            </span>
+          </a>
+
+          <ul class="nav-links">
+            <li><a href="#architecture">Architecture</a></li>
+            <li><a href="#installation">Installation</a></li>
+            <li><a href="#deployment">Deployment</a></li>
+            <li><a class="nav-cta" href="https://github.com/Eir-Space/health">GitHub</a></li>
+          </ul>
         </nav>
+      </div>
     </header>
 
-    <section class="hero">
+    <main>
+      <section class="hero">
         <div class="container">
-            <div class="hero-content">
-                <h1>AI health consciousness that feels modern, not fragile.</h1>
-                <p class="subtitle">
-                    EIR Health System turns any AI agent into a health-aware assistant with systematic anatomical organization, 
-                    real-time rehabilitation support, and Sweden-engineered privacy that stays operationally clean.
+          <div class="hero-grid">
+            <div class="hero-copy">
+              <div class="eyebrow">Swedish-engineered · Privacy-first · Built for real recovery</div>
+              <h1>Health context for agents that need to feel operational, not ornamental.</h1>
+              <p>
+                EIR Health System turns an AI agent into a health-aware assistant with systematic anatomical
+                organization, structured rehabilitation support, and documentation patterns that survive real-world use.
+              </p>
+
+              <div class="hero-actions">
+                <a class="button button-primary" href="#installation">Install the system</a>
+                <a class="button button-secondary" href="https://github.com/Eir-Space/health">View source</a>
+              </div>
+
+              <div class="hero-stats" aria-label="Project stats">
+                <article class="stat-card">
+                  <span class="stat-value">176</span>
+                  <span class="stat-label">Tracking files</span>
+                </article>
+                <article class="stat-card">
+                  <span class="stat-value">25</span>
+                  <span class="stat-label">Years of real data</span>
+                </article>
+                <article class="stat-card">
+                  <span class="stat-value">8</span>
+                  <span class="stat-label">Mental health domains</span>
+                </article>
+                <article class="stat-card">
+                  <span class="stat-value">100%</span>
+                  <span class="stat-label">Agent compatible</span>
+                </article>
+              </div>
+            </div>
+
+            <aside class="hero-panel" aria-label="Live implementation summary">
+              <div class="panel-inner">
+                <div class="panel-kicker">Live implementation</div>
+                <h2 class="panel-title">Active rehabilitation support is already running inside the system.</h2>
+                <p class="panel-body">
+                  The current example tracks a finger joint injury from March 14, 2026 through daily prompts,
+                  workday adjustments, progress monitoring, and phased rehab guidance.
                 </p>
 
-                <div class="hero-stats">
-                    <div class="stat">
-                        <div class="stat-number">176</div>
-                        <div class="stat-label">Health tracking files</div>
-                    </div>
-                    <div class="stat">
-                        <div class="stat-number">25</div>
-                        <div class="stat-label">Years real health data</div>
-                    </div>
-                    <div class="stat">
-                        <div class="stat-number">8</div>
-                        <div class="stat-label">Mental health domains</div>
-                    </div>
-                    <div class="stat">
-                        <div class="stat-number">100%</div>
-                        <div class="stat-label">Agent compatible</div>
-                    </div>
-                </div>
+                <ul class="signal-list">
+                  <li><span>Current case</span><span>Finger joint trauma recovery</span></li>
+                  <li><span>Support pattern</span><span>Exercise reminders + work modifications</span></li>
+                  <li><span>Clinical posture</span><span>Safety-aware escalation boundaries</span></li>
+                </ul>
 
-                <div class="cta-buttons">
-                    <a href="#installation" class="btn btn-primary">📥 Install System</a>
-                    <a href="https://github.com/Eir-Space/health" class="btn btn-secondary">📚 View Source</a>
-                </div>
-            </div>
+                <ul class="stack-list">
+                  <li><strong class="inline-code">health/active.md</strong> keeps daily support visible.</li>
+                  <li><strong class="inline-code">health/diagnosis/</strong> captures active conditions and impact.</li>
+                  <li><strong class="inline-code">body/arms/rehabilitation/</strong> holds structured protocols.</li>
+                </ul>
+              </div>
+            </aside>
+          </div>
         </div>
-    </section>
+      </section>
 
-    <section class="section">
+      <section class="section">
         <div class="container">
-            <div class="implementation-banner">
-                <div class="banner-tag">LIVE</div>
-                <h3>🤚 Active rehabilitation implementation</h3>
-                <p>Currently supporting real finger joint injury recovery with daily agent assistance. 
-                Finger joint trauma from fall (2026-03-14) → Phase-based rehabilitation → 
-                Daily exercise reminders → Progress tracking → Recovery monitoring.</p>
+          <div class="live-strip">
+            <div class="live-copy">
+              <div class="live-tag">Live support surface</div>
+              <h2>Clinical health tracking with a working system behind it.</h2>
+              <p>
+                This is not a speculative health UI. The repository already supports active recovery workflows with
+                structured documentation, agent-readable anatomy, and rehabilitation cadence that can be carried across sessions.
+              </p>
             </div>
 
-            <div class="section-header">
-                <h2>Clinical health tracking that feels modern, not fragile.</h2>
-                <p class="section-subtitle">
-                    The product is intentionally comprehensive: systematic anatomical organization, 
-                    structured rehabilitation protocols, agent health consciousness, and privacy-first architecture.
+            <div class="live-metrics">
+              <div class="mini-card">
+                <strong>Daily flow</strong>
+                <span>Morning check-in, workday adaptation, evening rehab review.</span>
+              </div>
+              <div class="mini-card">
+                <strong>Data posture</strong>
+                <span>Local-first health storage with clear sovereignty and repo-native files.</span>
+              </div>
+              <div class="mini-card">
+                <strong>Agent posture</strong>
+                <span>Context-aware help without drifting into unsafe medical certainty.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="architecture">
+        <div class="container">
+          <div class="section-head centered">
+            <div class="section-label">Architecture</div>
+            <h2>One health document in. Complete agent consciousness out.</h2>
+            <p>
+              The system is designed around healthcare constraints: structured anatomy, health state coverage,
+              rehabilitation routines, and integration patterns that are defensible in production.
+            </p>
+          </div>
+
+          <div class="grid-3">
+            <article class="feature-card">
+              <div class="feature-index">01</div>
+              <h3>Systematic organization</h3>
+              <p>
+                176 anatomical and mental health tracking files with bilateral organization, precise terminology,
+                and a structure agents can actually navigate.
+              </p>
+            </article>
+
+            <article class="feature-card">
+              <div class="feature-index">02</div>
+              <h3>Rehabilitation protocols</h3>
+              <p>
+                Daily exercise phases, progress tracking, and recovery cues are built into the record instead of bolted
+                on as one-off prompts.
+              </p>
+            </article>
+
+            <article class="feature-card">
+              <div class="feature-index">03</div>
+              <h3>Health consciousness</h3>
+              <p>
+                Agents become aware of current constraints, active conditions, and behavioral context before they
+                respond to ordinary requests.
+              </p>
+            </article>
+
+            <article class="feature-card">
+              <div class="feature-index">04</div>
+              <h3>Document processing</h3>
+              <p>
+                PDFs, text exports, images, and healthcare records can be parsed into the same systematic health
+                structure used by the runtime agent.
+              </p>
+            </article>
+
+            <article class="feature-card">
+              <div class="feature-index">05</div>
+              <h3>Safety boundaries</h3>
+              <p>
+                Warning signs, escalation triggers, and provider handoff cues are captured as part of the support model.
+              </p>
+            </article>
+
+            <article class="feature-card">
+              <div class="feature-index">06</div>
+              <h3>Privacy architecture</h3>
+              <p>
+                Local-first storage and transparent file boundaries keep health data controllable without sacrificing
+                agent utility.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="section-head">
+            <div class="section-label">Coverage</div>
+            <h2>Built for healthcare constraints, not demo theater.</h2>
+            <p>
+              The system covers physical health, mental health, active diagnosis tracking, and agent integration as a
+              single operating model rather than separate product ideas.
+            </p>
+          </div>
+
+          <div class="grid-4">
+            <article class="system-card">
+              <div class="system-chip">Body systems</div>
+              <h3>Complete anatomical organization</h3>
+              <p>Structured tracking across head, neck, torso, arms, legs, skin, organs, and specific joints.</p>
+              <ul class="list-plain">
+                <li><span>Head, neck, torso</span><span>Systematic coverage</span></li>
+                <li><span>Arms and legs</span><span>Left and right tracking</span></li>
+                <li><span>Individual fingers</span><span>Precise documentation</span></li>
+                <li><span>Organ systems</span><span>Medical terminology</span></li>
+              </ul>
+            </article>
+
+            <article class="system-card">
+              <div class="system-chip">Mental health</div>
+              <h3>Eight-domain state tracking</h3>
+              <p>Mood, cognition, stress, sleep, energy, social context, behavior, and emotional processing.</p>
+              <ul class="list-plain">
+                <li><span>Mood and stress</span><span>Pattern recognition</span></li>
+                <li><span>Sleep and energy</span><span>Recovery optimization</span></li>
+                <li><span>Cognitive signals</span><span>Performance monitoring</span></li>
+                <li><span>Behavioral context</span><span>Daily function</span></li>
+              </ul>
+            </article>
+
+            <article class="system-card">
+              <div class="system-chip">Active diagnosis</div>
+              <h3>Conditions that need daily support</h3>
+              <p>Diagnosis files capture impact, phase, rehab requirements, and what the agent should account for.</p>
+              <ul class="list-plain">
+                <li><span>Finger joint injury</span><span>Live example</span></li>
+                <li><span>Rehab phases</span><span>Structured protocols</span></li>
+                <li><span>Progress tracking</span><span>Objective measures</span></li>
+                <li><span>Safety monitoring</span><span>Escalation triggers</span></li>
+              </ul>
+            </article>
+
+            <article class="system-card">
+              <div class="system-chip">Agent integration</div>
+              <h3>Health-aware conversation patterns</h3>
+              <p>Designed for natural integration into agent memory, runtime context loading, and support prompts.</p>
+              <ul class="list-plain">
+                <li><span>Context awareness</span><span>Health-informed responses</span></li>
+                <li><span>Proactive support</span><span>Exercise reminders</span></li>
+                <li><span>SOUL.md alignment</span><span>Personality preservation</span></li>
+                <li><span>Medical limits</span><span>Appropriate boundaries</span></li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="installation">
+        <div class="container">
+          <div class="section-head">
+            <div class="section-label">Installation</div>
+            <h2>Open source, with a clean path from clone to operational use.</h2>
+            <p>
+              The installation flow is intentionally direct: clone the repo, generate the structure if needed, then wire
+              the active files into your agent context.
+            </p>
+          </div>
+
+          <div class="installation-layout">
+            <div class="steps">
+              <article class="step-card">
+                <div class="step-top">
+                  <div class="step-number">1</div>
+                  <h3>Clone and initialize</h3>
+                </div>
+                <p>
+                  Pull the repository and generate the full anatomical structure so the workspace contains the complete
+                  health tracking surface.
                 </p>
-            </div>
-        </div>
-    </section>
+                <pre><code>git clone https://github.com/Eir-Space/health.git
+cd health
 
-    <section class="section" id="architecture">
-        <div class="container">
-            <div class="section-header">
-                <h2>One health document in. Complete agent consciousness out.</h2>
-                <p class="section-subtitle">
-                    Built for healthcare constraints, not demo theater. Open source at the core, 
-                    agent-native by design, production-ready from day one.
+python3 eir-parser/anatomical_structure_generator.py</code></pre>
+              </article>
+
+              <article class="step-card">
+                <div class="step-top">
+                  <div class="step-number">2</div>
+                  <h3>Configure agent integration</h3>
+                </div>
+                <p>
+                  Point your agent to the files that should shape its response behavior before each session or task run.
                 </p>
-            </div>
-
-            <div class="features-grid">
-                <div class="feature-card">
-                    <div class="feature-number">01</div>
-                    <h3>Systematic organization</h3>
-                    <p>176 anatomical and mental health tracking files with bilateral organization, 
-                    precise medical terminology, and agent-readable structure.</p>
-                </div>
-
-                <div class="feature-card">
-                    <div class="feature-number">02</div>
-                    <h3>Rehabilitation protocols</h3>
-                    <p>Structured exercise phases with daily reminders, progress tracking, and safety monitoring 
-                    integrated into natural agent conversations.</p>
-                </div>
-
-                <div class="feature-card">
-                    <div class="feature-number">03</div>
-                    <h3>Health consciousness</h3>
-                    <p>Transform any AI agent into a health-aware assistant with context-sensitive responses, 
-                    proactive support, and appropriate medical boundaries.</p>
-                </div>
-
-                <div class="feature-card">
-                    <div class="feature-number">04</div>
-                    <h3>Document processing</h3>
-                    <p>Parse and structure any healthcare document into agent-readable format. 
-                    PDFs, texts, images, EHR exports - all become systematic health tracking.</p>
-                </div>
-
-                <div class="feature-card">
-                    <div class="feature-number">05</div>
-                    <h3>Safety boundaries</h3>
-                    <p>Built-in medical escalation triggers, warning sign recognition, and appropriate 
-                    healthcare provider consultation guidance.</p>
-                </div>
-
-                <div class="feature-card">
-                    <div class="feature-number">06</div>
-                    <h3>Privacy architecture</h3>
-                    <p>Local-first design with granular privacy controls. Health data stays where you need it, 
-                    with clear data sovereignty and agent integration patterns.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="section architecture">
-        <div class="container">
-            <div class="section-header">
-                <h2>Built for healthcare constraints, not demo theater.</h2>
-            </div>
-
-            <div class="arch-grid">
-                <div class="arch-card">
-                    <h4>🫀 Body Systems</h4>
-                    <p>Complete anatomical organization with systematic tracking.</p>
-                    <ul class="arch-list">
-                        <li><span>Head, neck, torso</span><span>Systematic</span></li>
-                        <li><span>Arms, legs bilateral</span><span>Left/right tracking</span></li>
-                        <li><span>Individual fingers</span><span>Precise documentation</span></li>
-                        <li><span>Organ systems</span><span>Medical terminology</span></li>
-                    </ul>
-                </div>
-
-                <div class="arch-card">
-                    <h4>🧠 Mental Health</h4>
-                    <p>Comprehensive psychological wellness tracking across domains.</p>
-                    <ul class="arch-list">
-                        <li><span>Mood tracking</span><span>8 core domains</span></li>
-                        <li><span>Stress management</span><span>Pattern recognition</span></li>
-                        <li><span>Sleep quality</span><span>Recovery optimization</span></li>
-                        <li><span>Cognitive function</span><span>Performance monitoring</span></li>
-                    </ul>
-                </div>
-
-                <div class="arch-card">
-                    <h4>⚕️ Active Diagnosis</h4>
-                    <p>Current conditions requiring daily management and support.</p>
-                    <ul class="arch-list">
-                        <li><span>Finger joint injury</span><span>LIVE example</span></li>
-                        <li><span>Rehabilitation phases</span><span>Structured protocols</span></li>
-                        <li><span>Progress tracking</span><span>Objective measures</span></li>
-                        <li><span>Safety monitoring</span><span>Escalation triggers</span></li>
-                    </ul>
-                </div>
-
-                <div class="arch-card">
-                    <h4>🤖 Agent Integration</h4>
-                    <p>Natural health consciousness for any AI assistant.</p>
-                    <ul class="arch-list">
-                        <li><span>Context awareness</span><span>Health-informed responses</span></li>
-                        <li><span>Proactive support</span><span>Exercise reminders</span></li>
-                        <li><span>SOUL.md integration</span><span>Personality preservation</span></li>
-                        <li><span>Safety boundaries</span><span>Medical appropriateness</span></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="section" id="installation">
-        <div class="container">
-            <div class="section-header">
-                <h2>Open source, with a clear path to production deployment.</h2>
-                <p class="section-subtitle">
-                    Some teams want to self-host. Others want a managed path with clear documentation, 
-                    controlled deployment, and a cleaner integration model.
-                </p>
-            </div>
-
-            <div class="installation-steps">
-                <div class="step">
-                    <div class="step-header">
-                        <div class="step-title">
-                            <div class="feature-number">1</div>
-                            <span>Clone and initialize</span>
-                        </div>
-                    </div>
-                    <div class="step-content">
-                        <p>Download the complete health system with all anatomical tracking files and processing tools.</p>
-                        <div class="code-container">
-<pre><code><span class="comment"># Clone the EIR Health System</span>
-<span class="keyword">git clone</span> <span class="string">https://github.com/Eir-Space/health.git</span>
-<span class="keyword">cd</span> health
-
-<span class="comment"># Generate complete health structure (176 files)</span>
-<span class="keyword">python3</span> eir-parser/anatomical_structure_generator.py</code></pre>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="step">
-                    <div class="step-header">
-                        <div class="step-title">
-                            <div class="feature-number">2</div>
-                            <span>Configure agent integration</span>
-                        </div>
-                    </div>
-                    <div class="step-content">
-                        <p>Add health consciousness to your agent's core personality system.</p>
-                        <div class="code-container">
-<pre><code><span class="comment"># Add to your agent's SOUL.md or equivalent</span>
-<span class="keyword">## Health Context Loading</span>
+                <pre><code>## Health Context Loading
 Every session, read:
-1. health/active.md - Current health support needs
-2. health/diagnosis/ - Active conditions affecting daily function  
-3. Relevant rehabilitation protocols for ongoing conditions</code></pre>
-                        </div>
-                    </div>
-                </div>
+1. health/active.md
+2. health/diagnosis/
+3. Relevant rehabilitation protocols</code></pre>
+              </article>
 
-                <div class="step">
-                    <div class="step-header">
-                        <div class="step-title">
-                            <div class="feature-number">3</div>
-                            <span>Deploy health-aware responses</span>
-                        </div>
-                    </div>
-                    <div class="step-content">
-                        <p>Agent automatically becomes health-conscious with context-appropriate responses.</p>
-                        <div class="highlight-box success">
-                            <h4>Example: Context-aware response</h4>
-                            <div class="code-container">
-<pre><code>User: <span class="string">"I need to work on a long document"</span>
-Agent: <span class="string">"With your finger injury, let's plan this strategically:
-       - 25-minute typing sessions with 5-minute exercise breaks
-       - Voice dictation backup for extended sections
-       - Ergonomic positioning to minimize strain
-       Ready for your next rehab session?"</span></code></pre>
-                            </div>
-                        </div>
-                    </div>
+              <article class="step-card">
+                <div class="step-top">
+                  <div class="step-number">3</div>
+                  <h3>Deploy health-aware responses</h3>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="section deployment" id="deployment">
-        <div class="container">
-            <div class="section-header">
-                <h2>Swedish-engineered. Privacy-first. Built to ship.</h2>
-                <p class="section-subtitle">
-                    The current system is optimized around healthcare compliance, agent integration patterns, 
-                    and deployment models that teams can actually defend.
+                <p>
+                  Once loaded, the agent can adapt ordinary planning or work support to current injuries, fatigue,
+                  rehab cadence, and safety constraints.
                 </p>
+                <pre><code>User: "I need to work on a long document"
+
+Agent: "With your finger injury, let's plan this strategically:
+- 25-minute typing sessions with 5-minute exercise breaks
+- Voice dictation backup for extended sections
+- Ergonomic positioning to minimize strain"</code></pre>
+              </article>
             </div>
 
-            <div class="deployment-grid">
-                <div class="deployment-card">
-                    <h4>🏠 Self-hosted deployment</h4>
-                    <p>Run it yourself with full control over health data and agent integration.</p>
-                    <ul class="deployment-list">
-                        <li>Complete source code access</li>
-                        <li>Local health data storage</li>
-                        <li>Custom agent integrations</li>
-                        <li>Healthcare compliance control</li>
-                    </ul>
-                </div>
+            <aside class="code-card">
+              <h3>What ships in the repo</h3>
+              <p>
+                The repository already contains the core record model, parser utilities, real example data,
+                and the files needed to make daily health context actionable.
+              </p>
+              <pre><code>health/
+├── health.md
+├── active.md
+├── diagnosis/
+├── body/
+├── state/
+├── medications.md
+├── providers.md
+└── timeline.md
 
-                <div class="deployment-card">
-                    <h4>🤖 Agent integration patterns</h4>
-                    <p>Multiple integration approaches for different agent architectures.</p>
-                    <ul class="deployment-list">
-                        <li>SOUL.md personality integration</li>
-                        <li>Context-aware response patterns</li>
-                        <li>Proactive health support protocols</li>
-                        <li>Safety-aware medical boundaries</li>
-                    </ul>
-                </div>
-
-                <div class="deployment-card">
-                    <h4>🔒 Privacy architecture</h4>
-                    <p>Healthcare-grade privacy with clear data sovereignty patterns.</p>
-                    <ul class="deployment-list">
-                        <li>Local-first health tracking</li>
-                        <li>Granular privacy controls</li>
-                        <li>Swedish engineering standards</li>
-                        <li>Healthcare compliance ready</li>
-                    </ul>
-                </div>
-
-                <div class="deployment-card">
-                    <h4>📊 Production monitoring</h4>
-                    <p>Real-world validation with active rehabilitation support.</p>
-                    <ul class="deployment-list">
-                        <li>Live finger injury implementation</li>
-                        <li>25 years real health data processing</li>
-                        <li>Daily agent health support</li>
-                        <li>Objective progress tracking</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div style="text-align: center; margin-top: 3rem;">
-                <div class="cta-buttons">
-                    <a href="https://github.com/Eir-Space/health" class="btn btn-primary">🚀 Deploy Health System</a>
-                    <a href="https://github.com/Eir-Space/health/tree/main/health-system" class="btn btn-secondary">📖 Integration Guide</a>
-                </div>
-            </div>
+eir-parser/
+└── anatomical_structure_generator.py</code></pre>
+            </aside>
+          </div>
         </div>
-    </section>
+      </section>
 
-    <footer>
+      <section class="section deployment" id="deployment">
         <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h4>EIR Health System</h4>
-                    <p>Production-ready AI health consciousness. Swedish-engineered privacy. Built to ship.</p>
-                </div>
-                <div class="footer-section">
-                    <h4>Resources</h4>
-                    <ul class="footer-links">
-                        <li><a href="https://github.com/Eir-Space/health">GitHub Repository</a></li>
-                        <li><a href="https://github.com/Eir-Space/health/tree/main/health-system">Documentation</a></li>
-                        <li><a href="https://github.com/Eir-Space/health/issues">Issue Tracker</a></li>
-                        <li><a href="https://eir.space">EIR Space</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>Architecture</h4>
-                    <ul class="footer-links">
-                        <li><a href="https://github.com/Eir-Space/health/tree/main/health">Health Tracking</a></li>
-                        <li><a href="https://github.com/Eir-Space/health/tree/main/eir-parser">Document Parser</a></li>
-                        <li><a href="https://github.com/Eir-Space/health/tree/main/health-system">Agent Integration</a></li>
-                        <li><a href="https://github.com/Eir-Space/health/tree/main/health/diagnosis">Active Diagnosis</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>Contact</h4>
-                    <ul class="footer-links">
-                        <li><a href="https://scribe.eir.space">EIR Scribe</a></li>
-                        <li><a href="https://eir.space">EIR Space</a></li>
-                        <li><a href="mailto:support@eir.space">Support</a></li>
-                        <li><a href="https://github.com/Eir-Space">Organization</a></li>
-                    </ul>
-                </div>
+          <div class="section-head centered">
+            <div class="section-label">Deployment</div>
+            <h2>Swedish-engineered. Privacy-first. Built to ship.</h2>
+            <p>
+              Different teams will adopt the system differently, but the deployment posture remains the same:
+              explicit files, clear ownership, local-first storage, and agent integration patterns that are easy to inspect.
+            </p>
+          </div>
+
+          <div class="grid-2">
+            <article class="deployment-card">
+              <h3>Self-hosted deployment</h3>
+              <p>Run the full system yourself with complete control over health data, storage, and integration boundaries.</p>
+              <ul class="list-plain">
+                <li><span>Complete source access</span><span>Local control</span></li>
+                <li><span>Health data storage</span><span>Private by default</span></li>
+                <li><span>Custom integrations</span><span>Agent-specific</span></li>
+                <li><span>Compliance posture</span><span>Team-owned</span></li>
+              </ul>
+            </article>
+
+            <article class="deployment-card">
+              <h3>Agent integration patterns</h3>
+              <p>Use the health files as context inputs, memory sources, or structured prompts inside your existing agent stack.</p>
+              <ul class="list-plain">
+                <li><span>SOUL.md integration</span><span>Personality-compatible</span></li>
+                <li><span>Runtime context loading</span><span>Current-state aware</span></li>
+                <li><span>Support protocols</span><span>Proactive reminders</span></li>
+                <li><span>Safety posture</span><span>Medical boundaries</span></li>
+              </ul>
+            </article>
+
+            <article class="deployment-card">
+              <h3>Privacy architecture</h3>
+              <p>Health tracking stays close to the operator, with explicit files and minimal hidden application state.</p>
+              <ul class="list-plain">
+                <li><span>Local-first records</span><span>Clear sovereignty</span></li>
+                <li><span>Granular files</span><span>Auditable structure</span></li>
+                <li><span>Swedish engineering</span><span>Trust-oriented</span></li>
+                <li><span>Healthcare workflows</span><span>Production-minded</span></li>
+              </ul>
+            </article>
+
+            <article class="deployment-card">
+              <h3>Production validation</h3>
+              <p>The repo is grounded in a real rehabilitation workflow rather than a synthetic showcase dataset.</p>
+              <ul class="list-plain">
+                <li><span>Live finger injury support</span><span>Active use case</span></li>
+                <li><span>25 years of health data</span><span>Longitudinal context</span></li>
+                <li><span>Daily support loops</span><span>Operational cadence</span></li>
+                <li><span>Progress tracking</span><span>Objective changes</span></li>
+              </ul>
+            </article>
+          </div>
+
+          <div class="repo-card">
+            <div>
+              <h3>Start from the repo. Extend into your own agent runtime.</h3>
+              <p>
+                The public repository is the product surface today: documentation, examples, parser tooling, and the
+                working file model all live in the same place.
+              </p>
             </div>
-            <div class="footer-bottom">
-                <p>&copy; 2026 EIR Space. Swedish-engineered AI health consciousness.</p>
-                <p style="opacity: 0.7; font-size: 0.9rem;">Production-ready • Privacy-first • Built to ship</p>
+
+            <div class="repo-actions">
+              <a class="button button-primary" href="https://github.com/Eir-Space/health">Open GitHub</a>
+              <a class="button button-secondary" href="https://github.com/Eir-Space/health/tree/main/health-system">Read integration guide</a>
             </div>
+          </div>
         </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-copy">
+            <div class="brand-copy">
+              <span class="brand-name">EIR Health System</span>
+              <span class="brand-subtitle">Health context that AI agents can actually use.</span>
+            </div>
+          </div>
+
+          <div>
+            <div class="footer-heading">Explore</div>
+            <ul class="footer-links">
+              <li><a href="#architecture">Architecture</a></li>
+              <li><a href="#installation">Installation</a></li>
+              <li><a href="#deployment">Deployment</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <div class="footer-heading">Resources</div>
+            <ul class="footer-links">
+              <li><a href="https://github.com/Eir-Space/health">Repository</a></li>
+              <li><a href="https://github.com/Eir-Space/health/tree/main/health-system">Integration guide</a></li>
+              <li><a href="https://github.com/Eir-Space/health/tree/main/eir-parser">Parser tooling</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <p class="footer-note">
+          Production-ready health tracking and rehabilitation support for agents, presented with the Eir Space design language.
+        </p>
+      </div>
     </footer>
-
-    <script>
-        // Smooth scrolling for navigation links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            });
-        });
-
-        // Add animation on scroll
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.opacity = '1';
-                    entry.target.style.transform = 'translateY(0)';
-                }
-            });
-        }, observerOptions);
-
-        // Observe feature cards and architecture cards
-        document.querySelectorAll('.feature-card, .arch-card, .deployment-card').forEach(el => {
-            el.style.opacity = '0';
-            el.style.transform = 'translateY(30px)';
-            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-            observer.observe(el);
-        });
-    </script>
+  </div>
 </body>
 </html>
